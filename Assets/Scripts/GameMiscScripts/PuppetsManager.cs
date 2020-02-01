@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class PuppetsManager : MonoBehaviour
 {
-    private GameObject currentPuppet;
+    public GameObject currentPuppet;
     public Puppet puppet;
-    private GameObject[] puppets = new GameObject[ 10 ];
+    public GameObject[] puppets = new GameObject[ 10 ];
+    private BodyPartsSpawner bodyPartsSpawner;
 
-    void Start()
+    private void Awake()
     {
-        for ( int i = 1; i < 11; i++ )
+        bodyPartsSpawner = GameObject.Find("BodyPartsSpawner").GetComponent<BodyPartsSpawner>();
+
+        for (int i = 1; i < 11; i++)
         {
-            puppets[ i - 1 ] = (GameObject)(Resources.Load( "Prefabs/Puppet" + i.ToString() ));
+            puppets[i - 1] = (GameObject)(Resources.Load("Prefabs/Puppet" + i.ToString()));
         }
-        puppet = currentPuppet.GetComponent<Puppet>();
     }
 
-    void Update()
+    public void SetCurrentPuppet(GameObject go)
     {
-
+        currentPuppet = go;
+        puppet = currentPuppet.GetComponent<Puppet>();
+        bodyPartsSpawner.NewPuppet(go);
     }
 
     public bool CheckPuppet()
@@ -29,5 +33,4 @@ public class PuppetsManager : MonoBehaviour
         else
             return false;
     }
-
 }

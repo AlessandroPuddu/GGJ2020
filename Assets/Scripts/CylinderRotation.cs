@@ -8,7 +8,6 @@ public class CylinderRotation : MonoBehaviour
     {
         if (GameManager.Instance.IsConveyorBeltMoving())
         {
-            Debug.Log("quelporconediddio");
             transform.Rotate(new Vector3(0,0,100f) * Time.deltaTime, Space.Self);
         }
     }

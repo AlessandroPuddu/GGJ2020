@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 8132297308933906710}
   - component: {fileID: 873605031016879891}
   - component: {fileID: 5826463891346886765}
+  - component: {fileID: 7300384645181869033}
   m_Layer: 0
-  m_Name: Puppet1
+  m_Name: Puppet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a00981f74e20f4883364048f4222dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 0
 --- !u!114 &5826463891346886765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915c92bd09cf17f4eb431e9442cd920c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasCrutch: 1
-  hasChestDirty: 0
+  hasCrutch: 0
+  hasChestDirty: 1
   hasRightArmNotWhite: 0
   hasLeftArmNotWhite: 0
   hasRightLegNotWhite: 0
@@ -127,7 +129,7 @@ MonoBehaviour:
   hasHeadNotWhite: 0
   hasRightArmBroken: 0
   hasLeftArmBroken: 0
-  hasRightLegBroken: 1
+  hasRightLegBroken: 0
   hasLeftLegBroken: 0
   hasHeadBroken: 0
   hasBlood: 0
@@ -141,3 +143,19 @@ MonoBehaviour:
   hasJewishLeftArm: 0
   hasJewishRightLeg: 0
   hasJewishLeftLeg: 0
+--- !u!54 &7300384645181869033
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8132297308933906709}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

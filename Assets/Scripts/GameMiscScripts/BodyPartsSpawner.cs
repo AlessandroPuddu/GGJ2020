@@ -19,9 +19,15 @@ public class BodyPartsSpawner : MonoBehaviour
     void Start()
     {
         puppetsManager = GameObject.FindGameObjectWithTag( "PuppetsManager" ).GetComponent<PuppetsManager>();
-        puppet = puppetsManager.puppet;
-        bodyPartsStrings[ 0 ] = puppet.GetPartToSpawn();
+        
+        
         spawnLocation = new Vector3( transform.position.x, transform.position.y, transform.position.z );
+    }
+
+    public void NewPuppet(GameObject go)
+    {
+        puppet = puppetsManager.puppet;
+        bodyPartsStrings[0] = puppet.GetPartToSpawn();
     }
 
     public void SpawnBodyParts( string[] bodyParts )

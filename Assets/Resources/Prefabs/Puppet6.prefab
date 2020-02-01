@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 8132297308933906710}
   - component: {fileID: 873605031016879891}
   - component: {fileID: 5826463891346886765}
+  - component: {fileID: 1122307980926986835}
   m_Layer: 0
-  m_Name: Puppet9
+  m_Name: Puppet6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a00981f74e20f4883364048f4222dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 0
 --- !u!114 &5826463891346886765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,12 +134,28 @@ MonoBehaviour:
   hasHeadBroken: 0
   hasBlood: 0
   hasSyringe: 0
-  hasClownNose: 0
-  hasClownHair: 0
+  hasClownNose: 1
+  hasClownHair: 1
   hasHappyFace: 0
-  hasChild: 1
+  hasChild: 0
   hasJewishChest: 0
   hasJewishRightArm: 0
   hasJewishLeftArm: 0
   hasJewishRightLeg: 0
   hasJewishLeftLeg: 0
+--- !u!54 &1122307980926986835
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8132297308933906709}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

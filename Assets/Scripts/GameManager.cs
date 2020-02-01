@@ -7,6 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
+    private PuppetsManager puppetsManger;
 
     public List<GameObject> puppetsPrefabs;
     public Transform puppetOrigin;
@@ -22,8 +23,6 @@ public class GameManager : MonoBehaviour
     public List<Effect> screenContentBetweenLevels = new List<Effect>();
 
     public int level;
-
-
     private int maxLevel;
     private bool conveyorBeltMovement;
 
@@ -46,13 +45,15 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
+
+        puppetsManger = GameObject.FindGameObjectWithTag("PuppetsManager").GetComponent<PuppetsManager>();
     }
 
     private void Start()
     {
         conveyorBeltMovement = false;
         level = 0;
-        maxLevel = puppetsPrefabs.Count;
+        maxLevel = puppetsManger.puppets.Length;
         timetext.text = screenContentBetweenLevels[0].text;
     }
 
@@ -62,8 +63,9 @@ public class GameManager : MonoBehaviour
         {
             if (level < maxLevel)
             {
-                currentPuppet = Instantiate(puppetsPrefabs[level], puppetOrigin.position, puppetOrigin.rotation);
+                currentPuppet = Instantiate(puppetsManger.puppets[level], puppetOrigin.position, puppetOrigin.rotation);
                 currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetStopPoint);
+                puppetsManger.SetCurrentPuppet(currentPuppet);
                 NextLevel();
                 
             } else
@@ -111,7 +113,7 @@ public class GameManager : MonoBehaviour
 
     public void PuppetCheck(GameObject puppet)
     {
-        /*
+        /*TODO
         inserisci qui i controlli per il puppet e ritornami true o false da mettere nell'if
         */
         if (true)
