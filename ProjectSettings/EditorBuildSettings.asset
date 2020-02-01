@@ -68,7 +68,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GGJ2020/Alessandro/GrabProto.unity
     guid: 3f7fb3bc9cf20c24187a5da38fd9bc0b
+  - enabled: 1
+    path: Assets/Scenes/GGJ2020/misure.unity
+    guid: 84da2115d2cb63742bc72a5505ac520b
   m_configObjects: {}
