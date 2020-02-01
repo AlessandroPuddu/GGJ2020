@@ -34,6 +34,8 @@ public class WrongPartBehaviour : MonoBehaviour
             if(rb.isKinematic)
                 rb.useGravity = false;
 
+            // TODO change puppet bool also here for stuff that you have to remove (clown hair or nose...)
+
             if(waitCR == null) { 
                 waitCR = StartCoroutine(WaitForEndGrab());    
             }
