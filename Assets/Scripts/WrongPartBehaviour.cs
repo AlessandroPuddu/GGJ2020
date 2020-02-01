@@ -10,10 +10,13 @@ public class WrongPartBehaviour : MonoBehaviour
     private OVRGrabbable oVR;
     [SerializeField]
     private Rigidbody rb;
-    [SerializeField]
-    private BoxCollider bc;
+    //[SerializeField]
+    //private BoxCollider bc;
 
     private Coroutine waitCR;
+
+    [SerializeField]
+    private Collider bc;
 
     private void Awake()
     {
