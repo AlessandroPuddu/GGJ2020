@@ -43,13 +43,18 @@ public class ToColor : MonoBehaviour
                 }
             }
         }
+
+        if(isBeingHit)
+            isBeingHit = false;
     }
 
-    public void NotifyHit() { 
+    public void NotifyHitInThisFrame() { 
         isBeingHit = true;    
     }
 
+    /*
     public void NotifyStopHit() { 
         isBeingHit = false;    
     }
+    */
 }

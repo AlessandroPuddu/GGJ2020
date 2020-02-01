@@ -97,7 +97,7 @@ public class SprayRaycast : MonoBehaviour
             ToColor toColor = objectHit.collider.gameObject.transform.root.gameObject.GetComponent<ToColor>();
 
             if(toColor != null) { 
-                toColor.NotifyHit();    
+                toColor.NotifyHitInThisFrame();    
             }
         }
     }
