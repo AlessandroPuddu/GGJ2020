@@ -304,7 +304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223561400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.895, z: 0.45}
+  m_LocalPosition: {x: 0, y: 0.355, z: 0.186}
   m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1382630976}
@@ -1254,7 +1254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771693248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0.94, z: 0.45}
+  m_LocalPosition: {x: -3.1, y: 0.355, z: 0.186}
   m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1382630976}
@@ -1874,7 +1874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382630975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.394, z: 0.315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 771693249}
@@ -1903,8 +1903,8 @@ MonoBehaviour:
   puppetStopPoint: {fileID: 223561401}
   puppetDeadEnd: {fileID: 1410736712}
   level: 0
-  timetext: {fileID: 0}
-  tempoMedio: 0
+  timetext: {fileID: 1962843557}
+  tempoMedio: 15
 --- !u!1 &1410736711
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,6 +3224,18 @@ Transform:
   m_Father: {fileID: 301308633}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962843557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 233639598}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2013995742
 GameObject:
   m_ObjectHideFlags: 0
