@@ -10,6 +10,13 @@ public class MasterAnchorCollisions : MonoBehaviour
     [SerializeField]
     private GameObject rightPart;
 
+    private Puppet puppet;
+
+    private void Start()
+    {
+        puppet = transform.parent.GetComponent<Puppet>();
+    }
+
     // TODO - On trigger stay
     // hiltight this to give feedback
     private void OnTriggerEnter(Collider other)
@@ -24,6 +31,9 @@ public class MasterAnchorCollisions : MonoBehaviour
             // TODO - Check if this is already active?
             // TODO - Create a copy and then set active?
             inactiveChild.SetActive(true);
+
+            // Changes the boolean in puppet to being fixed for the specific body part
+            puppet.ChangePuppetBool( other.gameObject.name );
         }
     }
 

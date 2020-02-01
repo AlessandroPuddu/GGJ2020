@@ -10,15 +10,21 @@ public class WrongPartBehaviour : MonoBehaviour
     private OVRGrabbable oVR;
     [SerializeField]
     private Rigidbody rb;
-    [SerializeField]
-    private BoxCollider bc;
+    //[SerializeField]
+    //private BoxCollider bc;
 
     private Coroutine waitCR;
+
+    [SerializeField]
+    private Collider bc;
+
+    private Puppet puppet;
 
     private void Awake()
     {
         oVR = this.GetComponent<OVRGrabbable>();
         //rb = this.transform.root.gameObject.GetComponent<Rigidbody>();
+        puppet = GameObject.FindGameObjectWithTag( "SnapMaster" ).GetComponent<Puppet>();
     }
 
     private void Update()
@@ -30,6 +36,9 @@ public class WrongPartBehaviour : MonoBehaviour
                 rb.isKinematic = true;
             if(rb.isKinematic)
                 rb.useGravity = false;
+
+            // TODO change puppet bool also here for stuff that you have to remove (clown hair or nose...)
+            puppet.ChangePuppetBool( gameObject.name );
 
             if(waitCR == null) { 
                 waitCR = StartCoroutine(WaitForEndGrab());    

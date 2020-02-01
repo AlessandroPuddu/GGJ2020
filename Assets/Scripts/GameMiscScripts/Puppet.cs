@@ -45,4 +45,42 @@ public class Puppet : MonoBehaviour
         return false;
     }
 
+    public void ChangePuppetBool( string bodyPartName )
+    {
+        switch ( bodyPartName )
+        {
+            case "Head":
+                hasHeadBroken = false;
+                hasHappyFace = false;
+                break;
+            case "RightArm":
+                hasRightArmBroken = false;
+                break;
+            case "LeftArm":
+                hasLeftArmBroken = false;
+                break;
+            case "RightLeg":
+                hasRightLegBroken = false;
+                break;
+            case "LeftLeg":
+                hasLeftLegBroken = false;
+                break;
+            case "Crutch":
+                hasCrutch = false;
+                break;
+            case "Syringe":
+                hasSyringe = false;
+                break;
+            case "ClownNose":
+                hasClownNose = false;
+                break;
+            case "ClownHair":
+                hasClownHair = false;
+                break;
+            case "Child":
+                hasChild = false;
+                break;
+        }
+    }
+
 }
