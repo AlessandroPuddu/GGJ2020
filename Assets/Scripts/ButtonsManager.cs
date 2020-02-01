@@ -13,4 +13,12 @@ public class ButtonsManager : MonoBehaviour
     {
         
     }
+
+    public void OnTriggerEnter( Collider other )
+    {
+        if (other.gameObject.layer == gameObject.layer)
+        {
+            // activate
+        }
+    }
 }
