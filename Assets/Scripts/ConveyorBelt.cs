@@ -14,4 +14,13 @@ public class ConveyorBelt : MonoBehaviour
             transform.Translate(Vector3.down * Time.deltaTime);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "ObjectsKiller")
+        {
+            transform.position = spawnPoint.position;
+        }
+    }
+
 }
