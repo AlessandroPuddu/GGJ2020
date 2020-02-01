@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SnapMaster
+  - SnapSlave
+  - Debug
+  - DebugText
   layers:
   - Default
   - TransparentFX
