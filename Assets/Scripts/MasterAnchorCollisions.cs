@@ -33,7 +33,7 @@ public class MasterAnchorCollisions : MonoBehaviour
             inactiveChild.SetActive(true);
 
             // Changes the boolean in puppet to being fixed for the specific body part
-            ChangePuppetBool( other.gameObject.name );
+            puppet.ChangePuppetBool( other.gameObject.name );
         }
     }
 
@@ -45,28 +45,5 @@ public class MasterAnchorCollisions : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         
         Destroy(gameobject);
-    }
-
-    public void ChangePuppetBool(string bodyPartName)
-    {
-        switch ( bodyPartName )
-        {
-            case "Head":
-                puppet.hasHeadBroken = false;
-                puppet.hasHappyFace = false;
-                break;
-            case "RightArm":
-                puppet.hasRightArmBroken = false;
-                break;
-            case "LeftArm":
-                puppet.hasLeftArmBroken = false;
-                break;
-            case "RightLeg":
-                puppet.hasRightLegBroken = false;
-                break;
-            case "LeftLeg":
-                puppet.hasLeftLegBroken = false;
-                break;
-        }
     }
 }
