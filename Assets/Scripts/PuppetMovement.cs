@@ -19,6 +19,7 @@ public class PuppetMovement : MonoBehaviour
             } else
             {
                 run = false;
+                GameManager.Instance.SetConveyorBeltMovement(run);
             }
         }
     }
@@ -27,6 +28,7 @@ public class PuppetMovement : MonoBehaviour
     {
         this.endPoint = endpoint;
         run = true;
+        GameManager.Instance.SetConveyorBeltMovement(run);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,10 +38,5 @@ public class PuppetMovement : MonoBehaviour
             GameManager.Instance.PuppetCheck(gameObject);
             Destroy(gameObject);
         }
-    }
-
-    public bool IsPuppetStop()
-    {
-        return !run;
     }
  }

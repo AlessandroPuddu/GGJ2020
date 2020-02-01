@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public int level;
     private int maxLevel;
+    private bool conveyorBeltMovement;
     private GameObject currentPuppet;
 
     public TextMeshProUGUI timetext;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        conveyorBeltMovement = false;
         level = 0;
         maxLevel = puppetsPrefabs.Count;
     }
@@ -60,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void PuppetDoneButton()
     {
-        if (currentPuppet && currentPuppet.GetComponent<PuppetMovement>().IsPuppetStop())
+        if (currentPuppet && !conveyorBeltMovement)
         {
             currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetDeadEnd);
         }
@@ -116,5 +118,15 @@ public class GameManager : MonoBehaviour
     private void LevelComplete()
     {
         Debug.Log("Level " + (level - 1) + " complete!!!");
+    }
+
+    public void SetConveyorBeltMovement(bool isMoving)
+    {
+        conveyorBeltMovement = isMoving;
+    }
+
+    public bool IsConveyorBeltMoving()
+    {
+        return conveyorBeltMovement;
     }
 }
