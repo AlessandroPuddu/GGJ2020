@@ -8,11 +8,16 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     private PuppetsManager puppetsManger;
-
-    public List<GameObject> puppetsPrefabs;
     public Transform puppetOrigin;
     public Transform puppetStopPoint;
     public Transform puppetDeadEnd;
+
+    private int level;
+    private int maxLevel;
+    private bool conveyorBeltMovement;
+
+    private GameObject currentPuppet;
+    private Coroutine timer;
 
     [System.Serializable] public struct Effect
     {
@@ -21,17 +26,9 @@ public class GameManager : MonoBehaviour
     }
 
     public List<Effect> screenContentBetweenLevels = new List<Effect>();
-
-    public int level;
-    private int maxLevel;
-    private bool conveyorBeltMovement;
-
-    private GameObject currentPuppet;
-
     public TextMeshProUGUI timetext;
     public GameObject targetPanel;
-    public int tempoMedio;
-    Coroutine timer;
+    public int roundTime;
 
     public static GameManager Instance { get { return _instance; } }
 
@@ -101,7 +98,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckTimer()
     {
-        int currentTime = tempoMedio;
+        int currentTime = roundTime;
         while(currentTime > 0)
         {
             timetext.alignment = TextAlignmentOptions.MidlineLeft;
