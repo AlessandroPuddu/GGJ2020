@@ -93,7 +93,12 @@ public class SprayRaycast : MonoBehaviour
 
         if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, 50))
         {
-            objectHit.collider.gameObject.transform.root.gameObject.GetComponent<Renderer>().material.color = Color.red;
+            //objectHit.collider.gameObject.transform.root.gameObject.GetComponent<Renderer>().material.color = Color.red;
+            ToColor toColor = objectHit.collider.gameObject.transform.root.gameObject.GetComponent<ToColor>();
+
+            if(toColor != null) { 
+                toColor.NotifyHit();    
+            }
         }
     }
 }
