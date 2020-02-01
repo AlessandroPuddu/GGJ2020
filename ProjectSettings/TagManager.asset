@@ -10,6 +10,7 @@ TagManager:
   - DebugText
   - InactiveRight
   - Hand
+  - PuppetsManager
   layers:
   - Default
   - TransparentFX
