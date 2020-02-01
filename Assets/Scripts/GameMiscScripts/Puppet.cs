@@ -45,6 +45,24 @@ public class Puppet : MonoBehaviour
         return false;
     }
 
+    public string GetPartToSpawn()
+    {
+        string partToSpawn = "";
+
+        if ( hasHeadBroken )
+            partToSpawn = "Head";
+        if ( hasRightArmBroken )
+            partToSpawn = "RightArm";
+        if ( hasLeftArmBroken )
+            partToSpawn = "LeftArm";
+        if ( hasRightLegBroken )
+            partToSpawn = "RightLeg";
+        if ( hasLeftLegBroken )
+            partToSpawn = "LeftLeg";
+
+        return partToSpawn;
+    }
+
     public void ChangePuppetBool( string bodyPartName )
     {
         switch ( bodyPartName )

@@ -22,8 +22,11 @@ public class GameManager : MonoBehaviour
     public List<Effect> screenContentBetweenLevels = new List<Effect>();
 
     public int level;
-    
-    public int maxLevel;
+
+
+    private int maxLevel;
+    private bool conveyorBeltMovement;
+
     private GameObject currentPuppet;
 
     public TextMeshProUGUI timetext;
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        conveyorBeltMovement = false;
         level = 0;
         maxLevel = puppetsPrefabs.Count;
         timetext.text = screenContentBetweenLevels[0].text;
@@ -72,7 +76,7 @@ public class GameManager : MonoBehaviour
 
     public void PuppetDoneButton()
     {
-        if (currentPuppet && currentPuppet.GetComponent<PuppetMovement>().IsPuppetStop())
+        if (currentPuppet && !conveyorBeltMovement)
         {
             currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetDeadEnd);
         }
@@ -136,5 +140,15 @@ public class GameManager : MonoBehaviour
         targetPanel.SetActive(false);
         timetext.text = screenContentBetweenLevels[level].text;
         //reproduce audio voice over
+    }
+
+    public void SetConveyorBeltMovement(bool isMoving)
+    {
+        conveyorBeltMovement = isMoving;
+    }
+
+    public bool IsConveyorBeltMoving()
+    {
+        return conveyorBeltMovement;
     }
 }
