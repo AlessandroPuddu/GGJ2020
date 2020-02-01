@@ -732,7 +732,6 @@ GameObject:
   m_Component:
   - component: {fileID: 473518}
   - component: {fileID: 13623232}
-  - component: {fileID: 2257984831030853080}
   m_Layer: 0
   m_Name: GrabVolumeBig
   m_TagString: Untagged
@@ -764,24 +763,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 172650}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.026
   m_Height: 0.14
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &2257984831030853080
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172650}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.05
-  m_Center: {x: 0, y: -0.01158736, z: 0}
 --- !u!1 &174170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &437990
 Transform:
   m_ObjectHideFlags: 0
