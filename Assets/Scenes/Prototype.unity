@@ -347,57 +347,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 133031835, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 133031837, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_fontSizeMin
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_margin.z
-      value: 7.7918534
-      objectReference: {fileID: 0}
-    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_fontSize
-      value: 52.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_margin.x
-      value: 7.803369
-      objectReference: {fileID: 0}
-    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_margin.y
-      value: -4.942941
-      objectReference: {fileID: 0}
-    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_margin.w
-      value: -5.5120697
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163328223957652750, guid: 9737d18a1946d6b4c8ea18f444591fef,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.011371026
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163328223957652750, guid: 9737d18a1946d6b4c8ea18f444591fef,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.011818524
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163328223957652750, guid: 9737d18a1946d6b4c8ea18f444591fef,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0.24145785
-      objectReference: {fileID: 0}
-    - target: {fileID: 5163328223957652750, guid: 9737d18a1946d6b4c8ea18f444591fef,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.9866319
+    - target: {fileID: 1518186856, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5163328224332033012, guid: 9737d18a1946d6b4c8ea18f444591fef,
         type: 3}
@@ -1270,15 +1222,15 @@ MonoBehaviour:
   puppetDeadEnd: {fileID: 1410736712}
   screenContentBetweenLevels:
   - text: Welcome worker. Repair the subjects, please.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 57ebaf15d7902dd4289d33c4a4c06fea, type: 3}
   - text: Nicely done.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 310d314c00ae8a040b8ff97c1ebca3e0, type: 3}
   - text: Use the spray to return the subjects to their optimal state.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 7a81a88490d91d44a82304ab70a13261, type: 3}
   - text: Work ennobles us.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 96524389761b24441b6d9bbb0a945f4a, type: 3}
   - text: Life is Order.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 77c74f9c321b6ca4e9beb21ffbddf8e9, type: 3}
   - text: Thank you.
     voiceOver: {fileID: 0}
   - text: It is a privilege to be a repairer.
@@ -1291,7 +1243,8 @@ MonoBehaviour:
     voiceOver: {fileID: 0}
   timetext: {fileID: 1962843557}
   targetPanel: {fileID: 1530402949}
-  roundTime: 15
+  roundTimer: 15
+  monitor: {fileID: 1518186857}
 --- !u!1001 &1384354868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1715,6 +1668,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5ba3ca0bcae8ea14d9a62ab8a97d8552,
     type: 3}
   m_PrefabInstance: {fileID: 1384354868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1518186857 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1518186857, guid: 9737d18a1946d6b4c8ea18f444591fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 233639598}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1530402949 stripped
 GameObject:
