@@ -9,6 +9,7 @@ TagManager:
   - Debug
   - DebugText
   - InactiveRight
+  - Hand
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager _instance;
+
     public List<GameObject> puppetsPrefabs;
     public Transform puppetOrigin;
     public Transform puppetStopPoint;
@@ -13,6 +15,20 @@ public class GameManager : MonoBehaviour
     public int level;
     private int maxLevel;
     private GameObject currentPuppet;
+
+    public static GameManager Instance { get { return _instance; } }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -29,6 +45,7 @@ public class GameManager : MonoBehaviour
                 currentPuppet = Instantiate(puppetsPrefabs[level], puppetOrigin.position, puppetOrigin.rotation);
                 currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetStopPoint);
                 NextLevel();
+                
             } else
             {
                 Debug.Log("GameOver");
@@ -38,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     public void PuppetDoneButton()
     {
-        if (currentPuppet)
+        if (currentPuppet && currentPuppet.GetComponent<PuppetMovement>().IsPuppetStop())
         {
             currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetDeadEnd);
         }
@@ -47,5 +64,36 @@ public class GameManager : MonoBehaviour
     private void NextLevel()
     {
         level += 1;
+    }
+
+    private void GameOver()
+    {
+
+    }
+
+    public void PuppetCheck(GameObject puppet)
+    {
+        /*
+        inserisci qui i controlli per il puppet e ritornami true o false da mettere nell'if
+        */
+        if (true)
+        {
+            LevelComplete();
+        } else
+        {
+            RepeateLevel();
+        }
+    }
+
+    private void RepeateLevel()
+    {
+        level -= 1;
+        currentPuppet = null;
+        NextPuppetButton();
+    }
+
+    private void LevelComplete()
+    {
+        Debug.Log("Level " + (level - 1) + " complete!!!");
     }
 }
