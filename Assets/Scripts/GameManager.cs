@@ -135,7 +135,11 @@ public class GameManager : MonoBehaviour
 
     private void LevelComplete()
     {
-        StopCoroutine(timer);
+        if (timer != null)
+        {
+            StopCoroutine(timer);
+        }
+        
         Debug.Log("Level " + (level - 1) + " complete!!!");
         timetext.alignment = TextAlignmentOptions.Midline;
         targetPanel.SetActive(false);

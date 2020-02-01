@@ -11,7 +11,7 @@ public class ConveyorBelt : MonoBehaviour
     {
         if (GameManager.Instance.IsConveyorBeltMoving())
         {
-            transform.Translate(Vector3.down * Time.deltaTime);
+            transform.Translate(Vector3.down * Time.deltaTime * 1.5f);
         }
     }
 
