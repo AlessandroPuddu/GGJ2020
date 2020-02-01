@@ -8,7 +8,7 @@ public class BodyPartsSpawner : MonoBehaviour
 
     void Start()
     {
-        
+        arm = Resources.Load()
     }
 
     void Update()
