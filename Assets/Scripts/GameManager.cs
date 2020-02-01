@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class GameManager : MonoBehaviour
     public int level;
     private int maxLevel;
     private GameObject currentPuppet;
+
+    public TextMeshProUGUI timetext;
+    public int tempoMedio;
+    Coroutine timer;
 
     public static GameManager Instance { get { return _instance; } }
 
@@ -64,11 +69,27 @@ public class GameManager : MonoBehaviour
     private void NextLevel()
     {
         level += 1;
+        if (level > 1)
+        {
+            StopCoroutine(timer);
+        }
+        timer = StartCoroutine("CheckTimer");
     }
 
     private void GameOver()
     {
+        timetext.text = "Lost";
+    }
 
+    IEnumerator CheckTimer()
+    {
+        int currentTime = tempoMedio;
+        while(currentTime > 0)
+        {
+            timetext.text = ""+currentTime--;
+            yield return new WaitForSeconds(1f);
+        }
+        GameOver();
     }
 
     public void PuppetCheck(GameObject puppet)
