@@ -45,6 +45,11 @@ public class Puppet : MonoBehaviour
         return false;
     }
 
+    public string GetPartToSpawn()
+    {
+        return null;
+    }
+
     public void ChangePuppetBool( string bodyPartName )
     {
         switch ( bodyPartName )
