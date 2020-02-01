@@ -33,7 +33,13 @@ public class PuppetMovement : MonoBehaviour
     {
         if (other.gameObject.name == "ObjectsKiller")
         {
+            GameManager.Instance.PuppetCheck(gameObject);
             Destroy(gameObject);
         }
     }
-}
+
+    public bool IsPuppetStop()
+    {
+        return !run;
+    }
+ }
