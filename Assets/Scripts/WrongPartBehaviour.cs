@@ -6,11 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class WrongPartBehaviour : MonoBehaviour
 {
+    [SerializeField]
     private OVRGrabbable oVR;
     [SerializeField]
     private Rigidbody rb;
     [SerializeField]
     private BoxCollider bc;
+
+    private Coroutine waitCR;
 
     private void Awake()
     {
@@ -20,17 +23,31 @@ public class WrongPartBehaviour : MonoBehaviour
 
     private void Update()
     {
-        //if (rb.useGravity) { 
-        //    Destroy(this);    
-        //}
+        if (oVR.isGrabbed) {
+            if(!bc.isTrigger)
+                bc.isTrigger = true;
+            if(!rb.isKinematic)
+                rb.isKinematic = true;
+            if(rb.isKinematic)
+                rb.useGravity = false;
 
-        if (oVR.isGrabbed && !rb.useGravity) {
-            // If I grab the wrong part
-            // I have to reenable its 
-            // rigidbody
-            bc.isTrigger = false;
-            rb.isKinematic = false;
-            rb.useGravity = true;
+            if(waitCR == null) { 
+                waitCR = StartCoroutine(WaitForEndGrab());    
+            }
         }
+    }
+
+    private IEnumerator WaitForEndGrab() {
+        while (!rb.useGravity) {
+            if (!oVR.isGrabbed) { 
+                bc.isTrigger = false;
+                rb.isKinematic = false;
+                rb.useGravity = true;
+            }
+            else {
+                yield return null;
+            }
+        }
+        waitCR = null;
     }
 }

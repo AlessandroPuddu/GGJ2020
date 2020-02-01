@@ -16,28 +16,14 @@ public class MasterAnchorCollisions : MonoBehaviour
     {
         if (other.gameObject.tag == "SnapSlave")
         {
-
-            //OVRGrabbable oVR = other.transform.root.gameObject.GetComponent<OVRGrabbable>();
-
-            //if (oVR != null)
-            //{
-            //    if (!oVR.isGrabbed)
-                //{
-                    //oVR.grabbedBy.ForceRelease(oVR);
-                    // TODO - maybe destroy ovr.go?
-                    //Destroy(other.gameObject);
+            
+            other.gameObject.GetComponent<MeshRenderer>().enabled = false;
                     
-                    other.gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    
-                    StartCoroutine(Destroy(other.gameObject));        
+            StartCoroutine(Destroy(other.gameObject));        
 
-                    // TODO - Check if this is already active?
-                    // TODO - Create a copy and then set active?
-                    inactiveChild.SetActive(true);
-
-                    //GameEvents.RaiseOnRightPartPlaced();
-                //}
-            //}
+            // TODO - Check if this is already active?
+            // TODO - Create a copy and then set active?
+            inactiveChild.SetActive(true);
         }
     }
 
@@ -46,7 +32,7 @@ public class MasterAnchorCollisions : MonoBehaviour
     }
 
     private IEnumerator Destroy(GameObject gameobject) { 
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(5.0f);
         
         Destroy(gameobject);
     }
