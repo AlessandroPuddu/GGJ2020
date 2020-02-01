@@ -415,4 +415,8 @@ public class OVRGrabber : MonoBehaviour
 			}
 		}
 	}
+
+    private void OnRightPartPlaced() { 
+        GrabVolumeEnable(true);    
+    }
 }

@@ -8,6 +8,7 @@ TagManager:
   - SnapSlave
   - Debug
   - DebugText
+  - InactiveRight
   layers:
   - Default
   - TransparentFX
