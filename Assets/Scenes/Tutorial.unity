@@ -441,17 +441,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairOVRPlayerController
       objectReference: {fileID: 0}
-    - target: {fileID: 8636518352128027199, guid: 113c68e0737bc524292a198ba323c20e,
-        type: 3}
-      propertyPath: m_parentTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8636518352613689708, guid: 113c68e0737bc524292a198ba323c20e,
-        type: 3}
-      propertyPath: m_parentTransform
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6020816047976824067, guid: 113c68e0737bc524292a198ba323c20e, type: 3}
+    - {fileID: 4982989077359465148, guid: 113c68e0737bc524292a198ba323c20e, type: 3}
+    - {fileID: 4372656755136744030, guid: 113c68e0737bc524292a198ba323c20e, type: 3}
+    - {fileID: 3666319061912003215, guid: 113c68e0737bc524292a198ba323c20e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 113c68e0737bc524292a198ba323c20e, type: 3}
 --- !u!1 &1235530667
 GameObject:
