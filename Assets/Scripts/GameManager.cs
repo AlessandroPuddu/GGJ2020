@@ -13,12 +13,24 @@ public class GameManager : MonoBehaviour
     public Transform puppetStopPoint;
     public Transform puppetDeadEnd;
 
+    [System.Serializable] public struct Effect
+    {
+        public string text;
+        public AudioClip voiceOver;
+    }
+
+    public List<Effect> screenContentBetweenLevels = new List<Effect>();
+
     public int level;
+
+
     private int maxLevel;
     private bool conveyorBeltMovement;
+
     private GameObject currentPuppet;
 
     public TextMeshProUGUI timetext;
+    public GameObject targetPanel;
     public int tempoMedio;
     Coroutine timer;
 
@@ -41,6 +53,7 @@ public class GameManager : MonoBehaviour
         conveyorBeltMovement = false;
         level = 0;
         maxLevel = puppetsPrefabs.Count;
+        timetext.text = screenContentBetweenLevels[0].text;
     }
 
     public void NextPuppetButton()
@@ -55,7 +68,8 @@ public class GameManager : MonoBehaviour
                 
             } else
             {
-                Debug.Log("GameOver");
+                targetPanel.SetActive(false);
+                timetext.text = "No one is different.";
             }
         }
     }
@@ -71,15 +85,15 @@ public class GameManager : MonoBehaviour
     private void NextLevel()
     {
         level += 1;
-        if (level > 1)
-        {
-            StopCoroutine(timer);
-        }
+        targetPanel.SetActive(true);
         timer = StartCoroutine("CheckTimer");
+
     }
 
     private void GameOver()
     {
+        timetext.alignment = TextAlignmentOptions.Midline;
+        targetPanel.SetActive(false);
         timetext.text = "Lost";
     }
 
@@ -88,6 +102,7 @@ public class GameManager : MonoBehaviour
         int currentTime = tempoMedio;
         while(currentTime > 0)
         {
+            timetext.alignment = TextAlignmentOptions.MidlineLeft;
             timetext.text = ""+currentTime--;
             yield return new WaitForSeconds(1f);
         }
@@ -113,11 +128,18 @@ public class GameManager : MonoBehaviour
         level -= 1;
         currentPuppet = null;
         NextPuppetButton();
+        StopCoroutine(timer);
+    
     }
 
     private void LevelComplete()
     {
+        StopCoroutine(timer);
         Debug.Log("Level " + (level - 1) + " complete!!!");
+        timetext.alignment = TextAlignmentOptions.Midline;
+        targetPanel.SetActive(false);
+        timetext.text = screenContentBetweenLevels[level].text;
+        //reproduce audio voice over
     }
 
     public void SetConveyorBeltMovement(bool isMoving)

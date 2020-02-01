@@ -280,6 +280,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90302997}
   m_CullTransparentMesh: 0
+--- !u!1 &133031835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 133031835, guid: 9737d18a1946d6b4c8ea18f444591fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 620092404}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &223561400
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,11 +550,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 301308633}
     m_Modifications:
+    - target: {fileID: 133031835, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133031837, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_margin.x
+      value: 5.0146813
+      objectReference: {fileID: 0}
+    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_fontSize
+      value: 54.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 998947849, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_margin.z
+      value: 5.7843046
+      objectReference: {fileID: 0}
     - target: {fileID: 5163328223388572381, guid: 9737d18a1946d6b4c8ea18f444591fef,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 44034810}
+    - target: {fileID: 5163328223957652750, guid: 9737d18a1946d6b4c8ea18f444591fef,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163328223957652750, guid: 9737d18a1946d6b4c8ea18f444591fef,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.049032286
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163328223957652750, guid: 9737d18a1946d6b4c8ea18f444591fef,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.21390134
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163328223957652750, guid: 9737d18a1946d6b4c8ea18f444591fef,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.016
+      objectReference: {fileID: 0}
     - target: {fileID: 5163328224332033012, guid: 9737d18a1946d6b4c8ea18f444591fef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1412,8 +1458,31 @@ MonoBehaviour:
   puppetOrigin: {fileID: 771693249}
   puppetStopPoint: {fileID: 223561401}
   puppetDeadEnd: {fileID: 1410736712}
+  screenContentBetweenLevels:
+  - text: Welcome worker. Repair the subjects, please.
+    voiceOver: {fileID: 0}
+  - text: Nicely done.
+    voiceOver: {fileID: 0}
+  - text: Use the spray to return the subjects to their optimal state.
+    voiceOver: {fileID: 0}
+  - text: Work ennobles us.
+    voiceOver: {fileID: 0}
+  - text: Life is Order.
+    voiceOver: {fileID: 0}
+  - text: Thank you.
+    voiceOver: {fileID: 0}
+  - text: It is a privilege to be a repairer
+    voiceOver: {fileID: 0}
+  - text: Fix them all
+    voiceOver: {fileID: 0}
+  - text: If it is not white, it is broken
+    voiceOver: {fileID: 0}
+  - text: Your work shift is over. See you tomorrow.
+    voiceOver: {fileID: 0}
   level: 0
+  maxLevel: 10
   timetext: {fileID: 998947849}
+  targetPanel: {fileID: 133031835}
   tempoMedio: 15
 --- !u!1 &1410736711
 GameObject:
