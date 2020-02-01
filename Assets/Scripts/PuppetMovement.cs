@@ -14,8 +14,10 @@ public class PuppetMovement : MonoBehaviour
     {
         if (endPoint && run == true)
         {
-            transform.position = Vector3.Lerp(transform.position, endPoint.position, 0.9f * Time.deltaTime);
-            if (Vector3.Distance(transform.position, endPoint.position) < 0.01f)
+            if (transform.position != endPoint.position)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, endPoint.position, 1.5f * Time.deltaTime);
+            } else
             {
                 run = false;
                 GameManager.Instance.SetConveyorBeltMovement(run);
