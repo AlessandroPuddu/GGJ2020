@@ -10,24 +10,38 @@ public class GameManager : MonoBehaviour
     public Transform puppetStopPoint;
     public Transform puppetDeadEnd;
 
-    private int level;
+    public int level;
+    private int maxLevel;
     private GameObject currentPuppet;
 
     private void Start()
     {
         level = 0;
+        maxLevel = puppetsPrefabs.Count;
     }
 
     public void NextPuppetButton()
     {
-        NextLevel();
-        currentPuppet = Instantiate(puppetsPrefabs[0], puppetOrigin.position, puppetOrigin.rotation);
-        currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetStopPoint);
+        if (!currentPuppet)
+        {
+            if (level < maxLevel)
+            {
+                currentPuppet = Instantiate(puppetsPrefabs[level], puppetOrigin.position, puppetOrigin.rotation);
+                currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetStopPoint);
+                NextLevel();
+            } else
+            {
+                Debug.Log("GameOver");
+            }
+        }
     }
 
     public void PuppetDoneButton()
     {
-        currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetDeadEnd);
+        if (currentPuppet)
+        {
+            currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetDeadEnd);
+        }
     }
 
     private void NextLevel()

@@ -28,4 +28,12 @@ public class PuppetMovement : MonoBehaviour
         this.endPoint = endpoint;
         run = true;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "ObjectsKiller")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
