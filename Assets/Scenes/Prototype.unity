@@ -1393,25 +1393,25 @@ MonoBehaviour:
   puppetStopPoint: {fileID: 223561401}
   puppetDeadEnd: {fileID: 1410736712}
   screenContentBetweenLevels:
-  - text: dio
+  - text: Welcome worker. Repair the subjects, please.
     voiceOver: {fileID: 0}
-  - text: porco
+  - text: Nicely done.
     voiceOver: {fileID: 0}
-  - text: xd
+  - text: Use the spray to return the subjects to their optimal state.
     voiceOver: {fileID: 0}
-  - text: xd
+  - text: Work ennobles us.
     voiceOver: {fileID: 0}
-  - text: xd
+  - text: Life is Order.
     voiceOver: {fileID: 0}
-  - text: xd
+  - text: Thank you.
     voiceOver: {fileID: 0}
-  - text: xd
+  - text: It is a privilege to be a repairer.
     voiceOver: {fileID: 0}
-  - text: xd
+  - text: Fix them all.
     voiceOver: {fileID: 0}
-  - text: xd
+  - text: If it is not white, it is broken.
     voiceOver: {fileID: 0}
-  - text: xd
+  - text: Your work shift is over. See you tomorrow.
     voiceOver: {fileID: 0}
   level: 0
   timetext: {fileID: 1962843557}
