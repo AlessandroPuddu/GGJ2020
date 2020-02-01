@@ -127,6 +127,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5140915236545135868, guid: 113c68e0737bc524292a198ba323c20e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140915236545135868, guid: 113c68e0737bc524292a198ba323c20e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140915236545135868, guid: 113c68e0737bc524292a198ba323c20e,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8636518352060821471, guid: 113c68e0737bc524292a198ba323c20e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -805,7 +820,7 @@ GameObject:
   - component: {fileID: 712179128}
   - component: {fileID: 712179127}
   - component: {fileID: 712179126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,10 +1469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f6592b373aca946b91929bfdcce56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puppetsPrefabs:
-  - {fileID: 8132297308933906709, guid: 6fcc31482f96fdc44a40605305d92e88, type: 3}
-  - {fileID: 8132297308933906709, guid: 6fcc31482f96fdc44a40605305d92e88, type: 3}
-  - {fileID: 8132297308933906709, guid: 6fcc31482f96fdc44a40605305d92e88, type: 3}
   puppetOrigin: {fileID: 771693249}
   puppetStopPoint: {fileID: 223561401}
   puppetDeadEnd: {fileID: 1410736712}
@@ -1482,10 +1493,9 @@ MonoBehaviour:
     voiceOver: {fileID: 0}
   - text: xd
     voiceOver: {fileID: 0}
-  level: 0
   timetext: {fileID: 1962843557}
   targetPanel: {fileID: 1530402949}
-  tempoMedio: 15
+  roundTimer: 0
 --- !u!1 &1410736711
 GameObject:
   m_ObjectHideFlags: 0
