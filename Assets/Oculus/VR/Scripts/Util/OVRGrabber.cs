@@ -82,6 +82,10 @@ public class OVRGrabber : MonoBehaviour
         get { return m_grabbedObj; }
     }
 
+    public OVRInput.Controller controller {
+        get { return m_controller; }    
+    }
+
 	public void ForceRelease(OVRGrabbable grabbable)
     {
         bool canRelease = (
@@ -415,8 +419,4 @@ public class OVRGrabber : MonoBehaviour
 			}
 		}
 	}
-
-    private void OnRightPartPlaced() { 
-        GrabVolumeEnable(true);    
-    }
 }
