@@ -25,7 +25,10 @@ public class ButtonsManager : MonoBehaviour
     {
         if (other.gameObject.layer == gameObject.layer)
         {
-            gameManager.NextPuppetButton();
+            if ( gameObject.name == "RedButton" )
+                gameManager.PuppetDoneButton();
+            else if ( gameObject.name == "BlueButton" )
+                gameManager.NextPuppetButton();
         }
     }
 }
