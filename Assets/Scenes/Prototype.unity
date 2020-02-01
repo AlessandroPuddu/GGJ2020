@@ -435,7 +435,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417501699}
-  m_LocalRotation: {x: -0.16639052, y: -0.6872512, z: 0.16639052, w: 0.6872512}
+  m_LocalRotation: {x: 0.03768496, y: -0.70610183, z: 0.3564885, w: 0.6106685}
   m_LocalPosition: {x: -677.7707, y: -375.86026, z: -111.14072}
   m_LocalScale: {x: 0.20000005, y: 0.050000004, z: 0.40000024}
   m_Children:
@@ -443,7 +443,7 @@ Transform:
   - {fileID: 1613888793}
   m_Father: {fileID: 301308633}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 27.22}
+  m_LocalEulerAnglesHint: {x: 33.33, y: -90, z: 27.22}
 --- !u!1 &418039631
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 697885616}
   - component: {fileID: 697885615}
   m_Layer: 0
-  m_Name: PuppetKiller
+  m_Name: ObjectsKiller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,7 +581,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697885614}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -640,8 +640,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697885614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.325, y: 1.156, z: 0.37}
-  m_LocalScale: {x: 0.289, y: 1, z: 1}
+  m_LocalPosition: {x: 3.325, y: 0.8616, z: 0.428}
+  m_LocalScale: {x: 0.289, y: 1.5888, z: 1.1858}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -769,6 +769,36 @@ Transform:
   m_Father: {fileID: 1382630976}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &974529287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974529288}
+  m_Layer: 0
+  m_Name: PuppetsOnScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974529288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974529287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994392327
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +919,7 @@ BoxCollider:
   m_GameObject: {fileID: 1125816623}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1193,9 +1223,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puppetsPrefabs:
   - {fileID: 8132297308933906709, guid: 6fcc31482f96fdc44a40605305d92e88, type: 3}
+  - {fileID: 8132297308933906709, guid: 6fcc31482f96fdc44a40605305d92e88, type: 3}
+  - {fileID: 8132297308933906709, guid: 6fcc31482f96fdc44a40605305d92e88, type: 3}
   puppetOrigin: {fileID: 771693249}
   puppetStopPoint: {fileID: 223561401}
   puppetDeadEnd: {fileID: 1410736712}
+  level: 0
 --- !u!1 &1410736711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,7 +1979,7 @@ BoxCollider:
   m_GameObject: {fileID: 2013995742}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
