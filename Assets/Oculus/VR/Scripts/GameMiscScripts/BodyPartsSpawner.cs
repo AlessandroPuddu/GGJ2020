@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class BodyPartsSpawner : MonoBehaviour
 {
-    private GameObject arm;
+    private GameObject armModel;
+    private GameObject armInstance;
+    private Vector3 spawnLocation = new Vector3( 0f, 5f, 0f );
 
     void Start()
     {
-        arm = Resources.Load()
+        armModel = Resources.Load( "Prefabs/Arm" ) as GameObject;
+        armInstance = Instantiate( armModel, spawnLocation, new Quaternion() );
     }
 
     void Update()
     {
         
     }
+
+    //public void SpawnBodyParts(string[] bodyParts)
+    //{
+    //    foreach (string s in bodyParts )
+    //    {
+    //        switch (s)
+
+    //    }
+    //}
 }
