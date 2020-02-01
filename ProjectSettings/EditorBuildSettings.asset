@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: a1903226eb37a5b4b8ce78b1c70dc209
+  - enabled: 0
+    path: Assets/Scenes/PrototypeAndrea.unity
+    guid: a216e942cbf500243bd05b3639410d7a
   m_configObjects: {}

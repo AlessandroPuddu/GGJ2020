@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public List<Effect> screenContentBetweenLevels = new List<Effect>();
     public TextMeshProUGUI timetext;
     public GameObject targetPanel;
-    public int roundTime;
+    public int roundTimer;
 
     public static GameManager Instance { get { return _instance; } }
 
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckTimer()
     {
-        int currentTime = roundTime;
+        int currentTime = roundTimer;
         while(currentTime > 0)
         {
             timetext.alignment = TextAlignmentOptions.MidlineLeft;
