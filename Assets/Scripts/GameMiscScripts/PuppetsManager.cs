@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuppetsManager : MonoBehaviour
 {
     private GameObject currentPuppet;
-    private Puppet puppet;
+    public Puppet puppet;
     private GameObject[] puppets = new GameObject[ 10 ];
 
     void Start()

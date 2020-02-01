@@ -10,31 +10,18 @@ public class BodyPartsSpawner : MonoBehaviour
     private GameObject rightLeg;
     private GameObject leftLeg;
     private GameObject head;
-    private Vector3 spawnLocation = new Vector3( 0f, 5f, 0f );
-
-    // TBD
-    private Vector3 spawnLocation1 = new Vector3( 0f, 5f, 1f );
-    private Vector3 spawnLocation2 = new Vector3( 0f, 5f, -1f );
-    private Vector3 spawnLocation3 = new Vector3( 1f, 5f, 0f );
-    private Vector3 spawnLocation4 = new Vector3( -1f, 5f, 0f );
-    private Vector3 spawnLocation5 = new Vector3( 1f, 5f, 1f );
-    private Vector3[] spawnLocations = new Vector3[ 5 ];
+    private Vector3 spawnLocation;
+    private Puppet puppet;
+    private PuppetsManager puppetsManager;
 
     private string[] bodyPartsStrings = new string[ 5 ] { "RightArm", "LeftArm", "RightLeg", "LeftLeg", "Head" };
 
     void Start()
     {
-        spawnLocations[ 0 ] = spawnLocation1;
-        spawnLocations[ 1 ] = spawnLocation2;
-        spawnLocations[ 2 ] = spawnLocation3;
-        spawnLocations[ 3 ] = spawnLocation4;
-        spawnLocations[ 4 ] = spawnLocation5;
-        SpawnBodyParts( bodyPartsStrings );
-    }
-
-    void Update()
-    {
-
+        puppetsManager = GameObject.FindGameObjectWithTag( "PuppetsManager" ).GetComponent<PuppetsManager>();
+        puppet = puppetsManager.puppet;
+        bodyPartsStrings[ 0 ] = puppet.GetPartToSpawn();
+        spawnLocation = new Vector3( transform.position.x, transform.position.y, transform.position.z );
     }
 
     public void SpawnBodyParts( string[] bodyParts )
@@ -67,10 +54,12 @@ public class BodyPartsSpawner : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < bodyPartsToSpawn.Length; i++ )
-        {
-            bodyPartsToSpawn[ i ] = Instantiate( bodyPartsToSpawn[ i ], spawnLocations[ i ], new Quaternion() );
-        }
+        bodyPartsToSpawn[ 0 ] = Instantiate( bodyPartsToSpawn[ 0 ], spawnLocation, new Quaternion() );
+
+        //for (int i = 0; i < bodyPartsToSpawn.Length; i++ )
+        //{
+        //    bodyPartsToSpawn[ i ] = Instantiate( bodyPartsToSpawn[ i ], spawnLocations[ i ], new Quaternion() );
+        //}
     }
 
 }
