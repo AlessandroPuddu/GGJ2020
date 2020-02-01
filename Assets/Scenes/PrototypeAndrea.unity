@@ -1524,7 +1524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410736711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 0.895, z: 0.45}
+  m_LocalPosition: {x: 4, y: 0.355, z: 0.45}
   m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1382630976}
@@ -1636,6 +1636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   furnaceTop: {fileID: 1810684125}
+  grateStartingPosition: {fileID: 0}
+  grateEndingPosition: {fileID: 0}
 --- !u!1 &1445405008
 GameObject:
   m_ObjectHideFlags: 0
