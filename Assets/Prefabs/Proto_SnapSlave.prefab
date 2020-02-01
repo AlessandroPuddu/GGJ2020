@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 431859508617541619}
   - component: {fileID: 6004596209778657224}
   - component: {fileID: 5399056136598038770}
+  - component: {fileID: 2548631093140948802}
   m_Layer: 0
   m_Name: Anchor_S
-  m_TagString: SnapMaster
+  m_TagString: SnapSlave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,6 +62,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2548631093140948802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020446780335420292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b245bd0381bb40bbe41e18f63078b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1071537202962417124
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,9 +85,10 @@ GameObject:
   - component: {fileID: 4224523314967560009}
   - component: {fileID: 971782026935516652}
   - component: {fileID: 4179907397934983723}
+  - component: {fileID: 6919577197933873433}
   m_Layer: 0
   m_Name: Anchor_E
-  m_TagString: SnapMaster
+  m_TagString: SnapSlave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +136,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6919577197933873433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071537202962417124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b245bd0381bb40bbe41e18f63078b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3781682894284218559
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,9 +159,10 @@ GameObject:
   - component: {fileID: 4347595779698867024}
   - component: {fileID: 8540029415988673946}
   - component: {fileID: 897384154742846965}
+  - component: {fileID: 4753935609631650584}
   m_Layer: 0
   m_Name: Anchor_Back
-  m_TagString: SnapMaster
+  m_TagString: SnapSlave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +210,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4753935609631650584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3781682894284218559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b245bd0381bb40bbe41e18f63078b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4676774810090777472
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,11 +234,11 @@ GameObject:
   - component: {fileID: 3647011684172745909}
   - component: {fileID: 8726051322060337059}
   - component: {fileID: 809952115405903774}
-  - component: {fileID: 7288552851231666400}
-  - component: {fileID: 8220878866816454098}
+  - component: {fileID: 3635231828234067212}
+  - component: {fileID: 5010548795017557972}
   m_Layer: 0
-  m_Name: Proto_SnapMaster
-  m_TagString: Untagged
+  m_Name: Proto_SnapSlave
+  m_TagString: SnapSlave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +288,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d2ccbefb50e231c4484cc2f00b264de0, type: 2}
+  - {fileID: 2100000, guid: d61b70f1f3b4eab4f8b031dc96d322d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -283,7 +322,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7288552851231666400
+--- !u!54 &3635231828234067212
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,7 +338,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8220878866816454098
+--- !u!114 &5010548795017557972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,9 +366,10 @@ GameObject:
   - component: {fileID: 2120703305744511831}
   - component: {fileID: 8163455501753974369}
   - component: {fileID: 7992200278716210899}
+  - component: {fileID: 8831059904534756108}
   m_Layer: 0
   m_Name: Anchor_W
-  m_TagString: SnapMaster
+  m_TagString: SnapSlave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,6 +417,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8831059904534756108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688540970843293444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b245bd0381bb40bbe41e18f63078b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7017981244656096800
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,9 +440,10 @@ GameObject:
   - component: {fileID: 3112961849353736213}
   - component: {fileID: 1285767622511189657}
   - component: {fileID: 9099419268449121856}
+  - component: {fileID: 5037625061722446759}
   m_Layer: 0
   m_Name: Anchor_Front
-  m_TagString: SnapMaster
+  m_TagString: SnapSlave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,6 +491,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5037625061722446759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017981244656096800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b245bd0381bb40bbe41e18f63078b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7026793010981641197
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,9 +514,10 @@ GameObject:
   - component: {fileID: 8044109228723747888}
   - component: {fileID: 8883325831779351956}
   - component: {fileID: 7051788550756059592}
+  - component: {fileID: 86736692999377116}
   m_Layer: 0
   m_Name: Anchor_N
-  m_TagString: SnapMaster
+  m_TagString: SnapSlave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,3 +565,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &86736692999377116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7026793010981641197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118b245bd0381bb40bbe41e18f63078b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
