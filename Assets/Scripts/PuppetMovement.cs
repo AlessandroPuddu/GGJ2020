@@ -7,18 +7,15 @@ public class PuppetMovement : MonoBehaviour
     // Start is called before the first frame update
     private Transform endPoint;
     private bool run;
-    public float distance;
+    private float distance;
 
     // Update is called once per frame
     void Update()
     {
         if (endPoint && run == true)
         {
-            distance = Vector3.Distance(transform.position, endPoint.position);
-            if (distance > 0.005f)
-            {
-                transform.Translate(Vector3.right * Time.deltaTime);
-            } else
+            transform.position = Vector3.Lerp(transform.position, endPoint.position, 0.9f * Time.deltaTime);
+            if (Vector3.Distance(transform.position, endPoint.position) < 0.01f)
             {
                 run = false;
                 GameManager.Instance.SetConveyorBeltMovement(run);
