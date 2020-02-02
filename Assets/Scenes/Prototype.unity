@@ -708,7 +708,7 @@ PrefabInstance:
     - target: {fileID: 8636518352061051889, guid: 113c68e0737bc524292a198ba323c20e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8793223820228594156, guid: 113c68e0737bc524292a198ba323c20e,
         type: 3}
@@ -3071,20 +3071,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6311028768259475664, guid: e52452c038cf8b44dbb75b816ef883f6,
+    - target: {fileID: 4910868772111356887, guid: e52452c038cf8b44dbb75b816ef883f6,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.2902
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311028768259475664, guid: e52452c038cf8b44dbb75b816ef883f6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6865
-      objectReference: {fileID: 0}
-    - target: {fileID: 8263024854148548489, guid: e52452c038cf8b44dbb75b816ef883f6,
-        type: 3}
-      propertyPath: m_Name
-      value: GrateEndingPoint
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e52452c038cf8b44dbb75b816ef883f6, type: 3}

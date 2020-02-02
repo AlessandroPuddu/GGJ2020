@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111961368260868663}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.658, y: -0.101, z: -0.231}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 5965538673396023376}
   - component: {fileID: 1199790669923005759}
   - component: {fileID: 4910868772111356887}
+  - component: {fileID: 8693311924599674858}
   m_Layer: 0
   m_Name: Hellfire
   m_TagString: Untagged
@@ -168,6 +169,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8693311924599674858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564069292238795011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353a772bd9deac9468b9bca5d1c43692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7707006838082538037
 GameObject:
   m_ObjectHideFlags: 0
