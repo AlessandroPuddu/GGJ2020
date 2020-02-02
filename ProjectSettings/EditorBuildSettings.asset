@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PrototypeAndrea.unity
     guid: a216e942cbf500243bd05b3639410d7a
+  - enabled: 0
+    path: Assets/Scenes/Prototype.unity
+    guid: 88b01872bacbdc0469c6a408facc5639
   m_configObjects: {}

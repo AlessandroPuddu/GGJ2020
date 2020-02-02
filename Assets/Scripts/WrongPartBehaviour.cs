@@ -15,8 +15,13 @@ public class WrongPartBehaviour : MonoBehaviour
 
     private Coroutine waitCR;
 
+    float m_deltaTime = 0f;
+
     [SerializeField]
     private Collider bc;
+
+    private Vector3 startPosition = Vector3.zero;
+    private Vector3 endPosition = Vector3.zero;
 
     private Puppet puppet;
 
@@ -37,17 +42,24 @@ public class WrongPartBehaviour : MonoBehaviour
             if(rb.isKinematic)
                 rb.useGravity = false;
 
-            // TODO change puppet bool also here for stuff that you have to remove (clown hair or nose...)
-            puppet.ChangePuppetBool( gameObject.name );
+            if(puppet != null) {
+                // TODO change puppet bool also here for stuff that you have to remove (clown hair or nose...)
+                puppet.ChangePuppetBool(gameObject.name);
 
-            if(waitCR == null) { 
+            }
+
+            if (waitCR == null) { 
                 waitCR = StartCoroutine(WaitForEndGrab());    
             }
         }
     }
 
     private IEnumerator WaitForEndGrab() {
+        startPosition = this.gameObject.transform.root.position;
+
         while (!rb.useGravity) {
+            m_deltaTime += Time.deltaTime;
+            
             if (!oVR.isGrabbed) { 
                 bc.isTrigger = false;
                 rb.isKinematic = false;
@@ -57,6 +69,41 @@ public class WrongPartBehaviour : MonoBehaviour
                 yield return null;
             }
         }
+
+        endPosition = this.gameObject.transform.root.position;
+
+        OVRInput.Controller controller = this.transform.root.GetComponent<OVRGrabbable>().grabbedBy.controller;
+        OVRGrabber grabber = this.transform.root.GetComponent<OVRGrabbable>().grabbedBy;
+
+        OVRPose localPose = new OVRPose { position = OVRInput.GetLocalControllerPosition(controller), orientation = OVRInput.GetLocalControllerRotation(controller) };
+        OVRPose offsetPose = new OVRPose { position = grabber.M_anchorOffsetPosition, orientation = grabber.M_anchorOffsetRotation };
+        localPose = localPose * offsetPose;
+
+        OVRPose trackingSpace = transform.ToOVRPose() * localPose.Inverse();
+        Vector3 linearVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerVelocity(controller);
+        Vector3 angularVelocity = trackingSpace.orientation * OVRInput.GetLocalControllerAngularVelocity(controller);
+
+        rb.velocity = linearVelocity;
+        rb.angularVelocity = angularVelocity;
+
         waitCR = null;
+    }
+
+    private Vector3 CalculateVelocity() {
+        if(endPosition == Vector3.zero) { 
+            endPosition = startPosition;    
+        }
+
+        float dx = endPosition.x - startPosition.x;
+        float dy = endPosition.y - startPosition.y;
+        float dz = endPosition.z - startPosition.z;
+        
+        float d = Mathf.Sqrt(dx*dx + dy*dy + dz * dz);
+
+        float vx = dx/d * d/m_deltaTime;
+        float vy = dy/d * d/m_deltaTime;
+        float vz = dz/d * d/m_deltaTime;
+
+        return new Vector3(vx,vy,vz);
     }
 }

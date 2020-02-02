@@ -86,6 +86,14 @@ public class OVRGrabber : MonoBehaviour
         get { return m_controller; }    
     }
 
+    public Vector3 M_anchorOffsetPosition{
+        get { return m_anchorOffsetPosition; }    
+    }
+
+    public Quaternion M_anchorOffsetRotation { 
+        get { return m_anchorOffsetRotation; }    
+    }
+
 	public void ForceRelease(OVRGrabbable grabbable)
     {
         bool canRelease = (
