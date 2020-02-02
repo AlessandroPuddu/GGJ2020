@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     {
         if (!currentPuppet)
         {
-            if (level < maxLevel)
+            if (level < 10)
             {
                 currentPuppet = Instantiate(puppetsManger.puppets[level], puppetOrigin.position, puppetsManger.puppets[ level ].transform.rotation );
                 currentPuppet.GetComponent<PuppetMovement>().SetEndpoint(puppetStopPoint);
@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
             LevelComplete();
         } else
         {
-            RepeateLevel();
+            //RepeateLevel();
         }
     }
 
