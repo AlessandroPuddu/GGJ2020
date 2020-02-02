@@ -17,6 +17,9 @@ public class SoundManager : MonoBehaviour
     public AudioClip defeat;
 
 
+    public List<AudioClip> burn;
+    public List<AudioClip> plugPlastic;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -63,5 +66,13 @@ public class SoundManager : MonoBehaviour
             even = !even;
             return even ? beep[2] : beep[3];
         }
+    }
+    public AudioClip gimmeBurn()
+    {
+        return burn[(int)Random.Range(0,burn.Count-1)];
+    }
+    public AudioClip gimmePlug()
+    {
+        return plugPlastic[(int)Random.Range(0, plugPlastic.Count - 1)];
     }
 }
