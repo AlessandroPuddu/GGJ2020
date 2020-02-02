@@ -25,6 +25,7 @@ public class ButtonsManager : MonoBehaviour
     {
         if (other.gameObject.layer == gameObject.layer)
         {
+            GetComponent<AudioSource>().Play();
             if ( gameObject.name == "DoneButton" )
                 gameManager.PuppetDoneButton();
             else if ( gameObject.name == "NextButton" )
