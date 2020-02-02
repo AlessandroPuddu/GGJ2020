@@ -32,7 +32,8 @@ public class WrongPartBehaviour : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
         bc = this.GetComponent<BoxCollider>();
         //rb = this.transform.root.gameObject.GetComponent<Rigidbody>();
-        puppet = GameObject.FindGameObjectWithTag( "SnapMaster" ).GetComponent<Puppet>();
+        //puppet = GameObject.FindGameObjectWithTag( "SnapMaster" ).GetComponent<Puppet>();
+        puppet = this.transform.root.gameObject.GetComponent<Puppet>();
     }
 
     private void Update()
