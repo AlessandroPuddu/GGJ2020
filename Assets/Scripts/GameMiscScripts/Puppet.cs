@@ -34,11 +34,6 @@ public class Puppet : MonoBehaviour
     public bool hasJewishRightLeg;
     public bool hasJewishLeftLeg;
 
-    void Start()
-    {
-
-    }
-
     public bool CheckAllRight()
     {
         if ( !hasCrutch && !hasChestDirty && !hasRightArmNotWhite && !hasLeftArmNotWhite && !hasRightLegNotWhite && !hasLeftLegNotWhite &&
