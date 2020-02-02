@@ -114,9 +114,6 @@ public class GameManager : MonoBehaviour
 
     public void PuppetCheck(GameObject puppet)
     {
-        /*TODO
-        inserisci qui i controlli per il puppet e ritornami true o false da mettere nell'if
-        */
         if (puppet.GetComponent<Puppet>().CheckAllRight())
         {
             LevelComplete();
