@@ -68,8 +68,12 @@ public class GameManager : MonoBehaviour
                 puppetsManger.SetCurrentPuppet(currentPuppet);
                 NextLevel();
                 
-            } else
-            {
+            } 
+            else if(level == 10) {
+                
+                //TODO - scena finale    
+            }
+            else{
                 targetPanel.SetActive(false);
                 timetext.text = "No one is different.";
             }
