@@ -317,9 +317,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1518186856, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.6
+    - target: {fileID: 328908283, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5163328224332033012, guid: 9737d18a1946d6b4c8ea18f444591fef,
         type: 3}
@@ -401,7 +401,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1d19d4bb75200324ebf5dfbc212b7645, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -525,6 +525,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &328908283 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 328908283, guid: 9737d18a1946d6b4c8ea18f444591fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 233639598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &418695744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,6 +602,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RepairOVRPlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8636518352061051889, guid: 113c68e0737bc524292a198ba323c20e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8793223820228594156, guid: 113c68e0737bc524292a198ba323c20e,
         type: 3}
@@ -1011,7 +1022,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1d19d4bb75200324ebf5dfbc212b7645, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1469,7 +1480,7 @@ MonoBehaviour:
     voiceOver: {fileID: 0}
   timetext: {fileID: 1962843557}
   targetPanel: {fileID: 1530402949}
-  roundTimer: 15
+  roundTimer: 15.1
   monitorAudio: {fileID: 1518186857}
 --- !u!114 &1382630978
 MonoBehaviour:
@@ -1488,6 +1499,14 @@ MonoBehaviour:
   - {fileID: 1024076795}
   - {fileID: 2001309175}
   - {fileID: 235760319}
+  secondaryAudioFromScreen: {fileID: 328908283}
+  beep:
+  - {fileID: 8300000, guid: 2fd5ee54632cbca4f9b73ce7e5f66eec, type: 3}
+  - {fileID: 8300000, guid: 8d4cc2751e7d8ee4989c606e4edf9898, type: 3}
+  - {fileID: 8300000, guid: 67ee260ed3b90054292395dc2086a9ff, type: 3}
+  - {fileID: 8300000, guid: d071c30cb48b97d4d87f6bf13c0a0e99, type: 3}
+  victory: {fileID: 8300000, guid: 292ec5ea196265941bb65a56093c75a8, type: 3}
+  defeat: {fileID: 8300000, guid: 51c37fddeb7e15c469e00b3355d64ec4, type: 3}
 --- !u!1 &1410736711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,7 +1891,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1d19d4bb75200324ebf5dfbc212b7645, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2078,7 +2097,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1d19d4bb75200324ebf5dfbc212b7645, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public List<Effect> screenContentBetweenLevels = new List<Effect>();
     public TextMeshProUGUI timetext;
     public GameObject targetPanel;
-    public int roundTimer;
+    public float roundTimer= 15.01f;
     public AudioSource monitorAudio;
 
     public static GameManager Instance { get { return _instance; } }
@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
         }
 
         puppetsManger = GameObject.FindGameObjectWithTag("PuppetsManager").GetComponent<PuppetsManager>();
-
     }
 
     private void Start()
@@ -90,24 +89,49 @@ public class GameManager : MonoBehaviour
         level += 1;
         targetPanel.SetActive(true);
         timer = StartCoroutine("CheckTimer");
-
     }
 
     private void GameOver()
     {
         timetext.alignment = TextAlignmentOptions.Midline;
         targetPanel.SetActive(false);
-        timetext.text = "Lost";
+        timetext.text = "Wrong";
+        monitorAudio.clip = SoundManager.Instance.defeat;
+        monitorAudio.Play();
     }
+
 
     IEnumerator CheckTimer()
     {
-        int currentTime = roundTimer;
-        while(currentTime > 0)
+        SoundManager sm = SoundManager.Instance;
+        float timeStart = Time.time;
+        float timeRemaining = roundTimer;
+        float timeCounting = 1;
+        while(timeCounting > 0)
         {
+            timeCounting = Time.time - timeStart;
+            timeCounting = timeRemaining - timeCounting;
+            sm.secondaryAudioFromScreen.clip = sm.getTimeBeat(timeCounting<3.75);
+            sm.secondaryAudioFromScreen.Play();
             timetext.alignment = TextAlignmentOptions.MidlineLeft;
-            timetext.text = ""+currentTime--;
-            yield return new WaitForSeconds(1f);
+            timetext.text = ""+(int)timeCounting;
+
+             if (timeCounting < 1)
+            {
+                yield return new WaitForSeconds(0.2f);
+            }else if(timeCounting < 2.5)
+            {
+                yield return new WaitForSeconds(0.35f);
+            }
+            else if (timeCounting < 7.5)
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(1f);
+            }       
+
         }
         GameOver();
     }
@@ -142,6 +166,9 @@ public class GameManager : MonoBehaviour
         timetext.alignment = TextAlignmentOptions.Midline;
         targetPanel.SetActive(false);
         timetext.text = screenContentBetweenLevels[level].text;
+
+        monitorAudio.clip = SoundManager.Instance.victory;
+        monitorAudio.Play();
 
         monitorAudio.clip = screenContentBetweenLevels[level].voiceOver;
         monitorAudio.Play();
