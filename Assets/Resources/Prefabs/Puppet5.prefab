@@ -178,6 +178,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manichini_Normali
       objectReference: {fileID: 0}
+    - target: {fileID: 9011256415839121183, guid: 05e86a48132779840a68ec02631a5031,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 16e5524e2ef72644287ef5831845c8fd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05e86a48132779840a68ec02631a5031, type: 3}
 --- !u!4 &2615494923256395410 stripped
