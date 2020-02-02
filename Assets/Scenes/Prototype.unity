@@ -1762,7 +1762,7 @@ MonoBehaviour:
     voiceOver: {fileID: 0}
   timetext: {fileID: 1962843557}
   targetPanel: {fileID: 1530402949}
-  roundTimer: 20.1
+  roundTimer: 25.1
   monitorAudio: {fileID: 1518186857}
 --- !u!114 &1382630978
 MonoBehaviour:
