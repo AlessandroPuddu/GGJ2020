@@ -61,10 +61,12 @@ public class BodyPartsSpawner : MonoBehaviour
             }
         }
 
-        bodyPartsToSpawn[ 0 ].AddComponent<BoxCollider>();
-        bodyPartsToSpawn[ 0 ].AddComponent<Rigidbody>();
-
+        
         bodyPartsToSpawn[ 0 ] = Instantiate( bodyPartsToSpawn[ 0 ], spawnLocation, bodyPartsToSpawn[0].transform.rotation );
+
+
+        bodyPartsToSpawn[0].AddComponent<BoxCollider>();
+        bodyPartsToSpawn[0].AddComponent<Rigidbody>();
 
         //for (int i = 0; i < bodyPartsToSpawn.Length; i++ )
         //{
