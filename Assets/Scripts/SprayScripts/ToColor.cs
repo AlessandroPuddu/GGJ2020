@@ -28,7 +28,7 @@ public class ToColor : MonoBehaviour
     private bool isFullWihite = false;
 
     [SerializeField]
-    private float timeNeedToBecomeWhite = 2.0f;
+    private float timeNeedToBecomeWhite = 1.0f;
 
     public bool IsFullWhite { 
         get { return isFullWihite; }    

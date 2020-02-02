@@ -11,9 +11,14 @@ public class SprayRaycast : MonoBehaviour
     [SerializeField]
     private GameObject particleParent;
 
+    //[SerializeField]
+    //private BoxCollider sprayCollider;
+
     private Material rootMaterial;
 
     private AudioSource myAS;
+
+    private bool hitThisFrame = false;
 
     private void Start()
     {
@@ -27,6 +32,8 @@ public class SprayRaycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //sprayCollider.enabled = false;
+
         if(root != null) {
             if (root.isGrabbed)
             {
@@ -48,14 +55,17 @@ public class SprayRaycast : MonoBehaviour
 
                             //if(!sprayParticle.isPlaying)
                             //sprayParticle.Play();
-                            if (!particleParent.activeInHierarchy)
-                            particleParent.SetActive(true);
+                            if (!particleParent.activeInHierarchy) {
+                                particleParent.SetActive(true);
+                                sprayParticle.Play();
+                            }
+                            
 
                         ManageHit();
                     }
                     else {
-                        //if (sprayParticle.isPlaying) { 
-                        //sprayParticle.Pause();
+                        // if (sprayParticle.isPlaying) { 
+                        // sprayParticle.Pause();
                         if (particleParent.activeInHierarchy) { 
                             particleParent.SetActive(false);
                         }    
@@ -73,7 +83,10 @@ public class SprayRaycast : MonoBehaviour
                         //if (!sprayParticle.isPlaying)
                         //sprayParticle.Play();
                         if (!particleParent.activeInHierarchy)
+                        {
                             particleParent.SetActive(true);
+                            sprayParticle.Play();
+                        }
 
                         ManageHit();
                     }
@@ -102,24 +115,36 @@ public class SprayRaycast : MonoBehaviour
                 //TO DO INTERROMPERE FUORI GRABBING
 
             }
-        }
+            else { 
+                ManageHit();
+            }
+        }   
     }
     private void ManageHit()
     {
         RaycastHit objectHit;
 
-        //Vector3 fwd = this.transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(this.transform.position, this.transform.forward * 50, Color.green);
+        Vector3 fwd = this.transform.TransformDirection(Vector3.forward);
+        Debug.DrawRay(this.transform.position,- this.transform.forward * 50, Color.green);
 
-        if (Physics.Raycast(this.transform.position, this.transform.forward, out objectHit, 50))
+        LayerMask mask = 1 << 12;
+
+        if (Physics.Raycast(this.transform.position, - this.transform.forward, out objectHit, 50,mask))
         {
             //objectHit.collider.gameObject.transform.root.gameObject.GetComponent<Renderer>().material.color = Color.red;
-            ToColor toColor = objectHit.collider.gameObject.transform.root.gameObject.GetComponent<ToColor>();
+            ToColor toColor = objectHit.collider.gameObject.GetComponent<ToColor>();
+
+            Debug.Log(objectHit.collider.gameObject.name);
 
             if(toColor != null) { 
                 toColor.NotifyHitInThisFrame();    
             }
         }
+        //sprayCollider.enabled = true;
     }
+
+    //public void HasToNotifyHit(GameObject targetHit) { 
+    //    targetHit.transform.root.gameObject.GetComponent<ToColor>();
+    //}
 }
 
