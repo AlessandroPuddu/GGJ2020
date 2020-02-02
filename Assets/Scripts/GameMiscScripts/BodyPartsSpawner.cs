@@ -65,11 +65,17 @@ public class BodyPartsSpawner : MonoBehaviour
         
         bodyPartsToSpawn[ 0 ] = Instantiate( bodyPartsToSpawn[ 0 ], spawnLocation, bodyPartsToSpawn[0].transform.rotation );
 
+        if(bodyPartsToSpawn[0] != null) {
+            //bodyPartsToSpawn[0].AddComponent<BoxCollider>();
+            BoxCollider bc = bodyPartsToSpawn[0].GetComponent<BoxCollider>();
 
-        //bodyPartsToSpawn[0].AddComponent<BoxCollider>();
-        bodyPartsToSpawn[0].GetComponent<BoxCollider>().enabled = true;
-        bodyPartsToSpawn[0].AddComponent<Rigidbody>();
+            if(bc != null) { 
+                bc.enabled = true;    
+            }
 
+            bodyPartsToSpawn[0].AddComponent<Rigidbody>();
+        }
+        
         //for (int i = 0; i < bodyPartsToSpawn.Length; i++ )
         //{
         //    bodyPartsToSpawn[ i ] = Instantiate( bodyPartsToSpawn[ i ], spawnLocations[ i ], new Quaternion() );
