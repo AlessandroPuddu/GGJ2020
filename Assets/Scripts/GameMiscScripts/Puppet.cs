@@ -113,31 +113,37 @@ public class Puppet : MonoBehaviour
             case "Head":
                 hasHeadNotWhite = false;
                 hasHeadDirty = false;
+                hasBlood = false;
                 break;
             case "Body":
                 hasChestDirty = false;
                 hasJewishChest = false;
                 hasChestNotWhite = false;
+                hasBlood = false;
                 break;
             case "LeftArm":
                 hasJewishLeftArm = false;
                 hasLeftArmDirty = false;
                 hasLeftArmNotWhite = false;
+                hasBlood = false;
                 break;
             case "RightArm":
                 hasJewishRightArm = false;
                 hasRightArmDirty = false;
                 hasRightArmNotWhite = false;
+                hasBlood = false;
                 break;
             case "LeftLeg":
                 hasJewishLeftLeg = false;
                 hasLeftLegDirty = false;
                 hasLeftLegNotWhite = false;
+                hasBlood = false;
                 break;
             case "RightLeg":
                 hasJewishRightLeg = false;
                 hasRightLegDirty = false;
                 hasRightLegNotWhite = false;
+                hasBlood = false;
                 break;
         }
     }
