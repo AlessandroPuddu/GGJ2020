@@ -13,12 +13,15 @@ public class SprayRaycast : MonoBehaviour
 
     private Material rootMaterial;
 
+    private AudioSource myAS;
+
     private void Start()
     {
         root = this.transform.root.gameObject.GetComponent<OVRGrabbable>();
         rootMaterial = this.transform.root.gameObject.GetComponent<Renderer>().material;
         //sprayParticle.Stop();
         particleParent.SetActive(false);
+        myAS= GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,10 +43,12 @@ public class SprayRaycast : MonoBehaviour
                     if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch) > 0)
                     {
                         rootMaterial.color = Color.yellow;
-                        
-                        //if(!sprayParticle.isPlaying)
+
+                        if (!myAS.isPlaying) myAS.Play();
+
+                            //if(!sprayParticle.isPlaying)
                             //sprayParticle.Play();
-                        if(!particleParent.activeInHierarchy)
+                            if (!particleParent.activeInHierarchy)
                             particleParent.SetActive(true);
 
                         ManageHit();
@@ -64,7 +69,7 @@ public class SprayRaycast : MonoBehaviour
                     if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) > 0)
                     {
                         rootMaterial.color = Color.green;
-
+                        if (!myAS.isPlaying) myAS.Play();
                         //if (!sprayParticle.isPlaying)
                         //sprayParticle.Play();
                         if (!particleParent.activeInHierarchy)
@@ -81,6 +86,21 @@ public class SprayRaycast : MonoBehaviour
                         }
                     }
                 }
+                if(currentGrabber.controller == OVRInput.Controller.LTouch && OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+                {
+                    //if (sprayParticle.isPlaying)
+                    //sprayParticle.Pause();
+                    myAS.Stop();
+                }
+
+                if (currentGrabber.controller == OVRInput.Controller.RTouch && OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+                {
+                    //if (sprayParticle.isPlaying)
+                    //sprayParticle.Pause();
+                    myAS.Stop();
+                }
+                //TO DO INTERROMPERE FUORI GRABBING
+
             }
         }
     }
