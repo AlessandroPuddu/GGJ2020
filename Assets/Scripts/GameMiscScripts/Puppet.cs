@@ -51,7 +51,7 @@ public class Puppet : MonoBehaviour
     {
         string partToSpawn = "";
 
-        if ( hasKnifeInHead )
+        if ( hasKnifeInHead || hasHappyFace)
             partToSpawn = "Head";
         if ( hasRightArmBroken )
             partToSpawn = "RightArm";
@@ -97,7 +97,7 @@ public class Puppet : MonoBehaviour
             case "ClownHair":
                 hasClownHair = false;
                 break;
-            case "Child":
+            case "Abortino_LP":
                 hasChild = false;
                 break;
             case "Knife":
