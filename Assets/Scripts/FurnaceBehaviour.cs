@@ -9,6 +9,9 @@ public class FurnaceBehaviour : MonoBehaviour
     private bool move;
     private bool open;
 
+    public AudioSource grigliaSource;
+    public AudioSource ovenFire;
+
     private void Start()
     {
         move = false;
@@ -19,6 +22,7 @@ public class FurnaceBehaviour : MonoBehaviour
     {
         if (move)
         {
+
             if (open)
             {
                 furnaceTop.transform.position = Vector3.Lerp(furnaceTop.transform.position, grateEndingPosition.position, 0.9f * Time.deltaTime * 8);
@@ -42,7 +46,13 @@ public class FurnaceBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Hand")
         {
             move = true;
+            if (grigliaSource.isPlaying)
+            {
+                grigliaSource.Stop();
+            }
+            grigliaSource.Play();
             open = true;
+            grigliaSource.volume *= 4;
         }
     }
 
@@ -50,8 +60,14 @@ public class FurnaceBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Hand")
         {
+            if (grigliaSource.isPlaying)
+            {
+                grigliaSource.Stop();
+            }
+            grigliaSource.Play();
             move = true;
             open = false;
+            grigliaSource.volume /= 4;
         }
     }
 

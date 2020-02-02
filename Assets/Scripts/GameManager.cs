@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timetext;
     public GameObject targetPanel;
     public int roundTimer;
+    public AudioSource monitorAudio;
 
     public static GameManager Instance { get { return _instance; } }
 
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
         }
 
         puppetsManger = GameObject.FindGameObjectWithTag("PuppetsManager").GetComponent<PuppetsManager>();
+
     }
 
     private void Start()
@@ -52,6 +54,8 @@ public class GameManager : MonoBehaviour
         level = 0;
         maxLevel = puppetsManger.puppets.Length;
         timetext.text = screenContentBetweenLevels[0].text;
+        monitorAudio.clip = screenContentBetweenLevels[0].voiceOver;
+        monitorAudio.Play();
     }
 
     public void NextPuppetButton()
@@ -142,12 +146,15 @@ public class GameManager : MonoBehaviour
         timetext.alignment = TextAlignmentOptions.Midline;
         targetPanel.SetActive(false);
         timetext.text = screenContentBetweenLevels[level].text;
-        //reproduce audio voice over
+
+        monitorAudio.clip = screenContentBetweenLevels[level].voiceOver;
+        monitorAudio.Play();
     }
 
     public void SetConveyorBeltMovement(bool isMoving)
     {
         conveyorBeltMovement = isMoving;
+        SoundManager.Instance.PlayRullo(isMoving);
     }
 
     public bool IsConveyorBeltMoving()
