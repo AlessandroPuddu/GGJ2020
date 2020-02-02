@@ -195,7 +195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7707006838082538037}
   m_LocalRotation: {x: -0.6354374, y: 0.31019235, z: -0.31019235, w: 0.6354374}
-  m_LocalPosition: {x: -0.59, y: 1.071, z: -0.1779}
+  m_LocalPosition: {x: -0.2902, y: 0.6865, z: -0.1779}
   m_LocalScale: {x: 0.686937, y: 0.988753, z: 1}
   m_Children: []
   m_Father: {fileID: 4023576616890763300}
@@ -620,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8263024854148548488}
   m_Layer: 0
-  m_Name: GrateStartingPoint
+  m_Name: GrateEndingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
