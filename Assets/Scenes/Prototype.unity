@@ -1829,11 +1829,11 @@ MonoBehaviour:
   - text: Life is Order.
     voiceOver: {fileID: 8300000, guid: 77c74f9c321b6ca4e9beb21ffbddf8e9, type: 3}
   - text: Thank you.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 317bcb3e88f4bd54ab7599caf2d22aec, type: 3}
   - text: It is a privilege to be a repairer.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 34ae98ad4b88a5949a95d9dabecc6f22, type: 3}
   - text: Fix them all.
-    voiceOver: {fileID: 0}
+    voiceOver: {fileID: 8300000, guid: 6513fe2617db2b64999cbc604f62c33a, type: 3}
   - text: If it is not white, it is broken.
     voiceOver: {fileID: 0}
   - text: Your work shift is over. See you tomorrow.
