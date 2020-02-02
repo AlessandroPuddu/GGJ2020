@@ -28,8 +28,12 @@ public class GameManager : MonoBehaviour
     public List<Effect> screenContentBetweenLevels = new List<Effect>();
     public TextMeshProUGUI timetext;
     public GameObject targetPanel;
+    public GameObject finalPanel;
+    public GameObject startPanel;
     public float roundTimer= 25.01f;
     public AudioSource monitorAudio;
+
+    public AudioClip winningClip;
 
     public static GameManager Instance { get { return _instance; } }
 
@@ -75,7 +79,10 @@ public class GameManager : MonoBehaviour
             }
             else{
                 targetPanel.SetActive(false);
-                timetext.text = "No one is different.";
+                startPanel.SetActive(false);
+                finalPanel.SetActive(true);
+                monitorAudio.clip = winningClip;
+                monitorAudio.Play();
             }
         }
     }
