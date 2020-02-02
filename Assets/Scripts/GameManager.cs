@@ -73,10 +73,6 @@ public class GameManager : MonoBehaviour
                 NextLevel();
                 
             } 
-            else if(level == 10) {
-                
-                //TODO - scena finale    
-            }
             else{
                 targetPanel.SetActive(false);
                 startPanel.SetActive(false);
