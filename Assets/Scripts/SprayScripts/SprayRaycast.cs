@@ -88,15 +88,15 @@ public class SprayRaycast : MonoBehaviour
                 }
                 if(currentGrabber.controller == OVRInput.Controller.LTouch && OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
                 {
-                    //if (sprayParticle.isPlaying)
-                    //sprayParticle.Pause();
+                    if (sprayParticle.isPlaying)
+                    sprayParticle.Pause();
                     myAS.Stop();
                 }
 
                 if (currentGrabber.controller == OVRInput.Controller.RTouch && OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
                 {
-                    //if (sprayParticle.isPlaying)
-                    //sprayParticle.Pause();
+                    if (sprayParticle.isPlaying)
+                    sprayParticle.Pause();
                     myAS.Stop();
                 }
                 //TO DO INTERROMPERE FUORI GRABBING
