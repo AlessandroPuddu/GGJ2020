@@ -130,9 +130,8 @@ public class GameManager : MonoBehaviour
     {
         level -= 1;
         currentPuppet = null;
-        NextPuppetButton();
+        //NextPuppetButton();
         StopCoroutine(timer);
-    
     }
 
     private void LevelComplete()
