@@ -187,11 +187,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasCrutch: 0
   hasChestDirty: 0
-  _hasHeadDirty: 0
+  hasHeadDirty: 0
   hasLeftArmDirty: 0
   hasLeftLegDirty: 0
   hasRightArmDirty: 0
   hasRightLegDirty: 0
+  hasChestNotWhite: 0
   hasRightArmNotWhite: 0
   hasLeftArmNotWhite: 0
   hasRightLegNotWhite: 0
@@ -201,7 +202,7 @@ MonoBehaviour:
   hasLeftArmBroken: 1
   hasRightLegBroken: 0
   hasLeftLegBroken: 0
-  hasHeadBroken: 0
+  hasKnifeInHead: 0
   hasBlood: 0
   hasSyringe: 0
   hasClownNose: 0
@@ -528,6 +529,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6579377882669312476, guid: 05e86a48132779840a68ec02631a5031, type: 3}
     - {fileID: 1788925881461592755, guid: 05e86a48132779840a68ec02631a5031, type: 3}
+    - {fileID: 2995841375600177579, guid: 05e86a48132779840a68ec02631a5031, type: 3}
+    - {fileID: 6057781423030733317, guid: 05e86a48132779840a68ec02631a5031, type: 3}
+    - {fileID: 4777016010849696732, guid: 05e86a48132779840a68ec02631a5031, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 05e86a48132779840a68ec02631a5031, type: 3}
 --- !u!4 &4180241573882034985 stripped
 Transform:

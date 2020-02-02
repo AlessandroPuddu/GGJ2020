@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &5143127624813774838
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7513292175362863381}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.032000005, y: 0.032000013, z: 0.032000013}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1920951049459285273
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29,6 +16,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5143127624813774838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513292175362863381}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.038980965, y: 0.056261785, z: 0.032000013}
+  m_Center: {x: -0.0000000018626456, y: -0.01213089, z: -4.9654236e-17}
+--- !u!114 &3736332433045758137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513292175362863381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d44d9c778292e248b00269a2d77478a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9180848054792232056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,31 +58,6 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!114 &3736332433045758137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7513292175362863381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d44d9c778292e248b00269a2d77478a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &7984946100498913450
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8076482069371969325}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.22140054, y: 0.24346742, z: 0.11129296}
-  m_Center: {x: 0.00000002980233, y: 0.034739826, z: 0.11978693}
 --- !u!54 &5712602686477522560
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -87,6 +74,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7984946100498913450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076482069371969325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.22140054, y: 0.22736345, z: 0.12279569}
+  m_Center: {x: 0.00000002980233, y: 0.04279181, z: 0.11403556}
 --- !u!114 &1200113734272955461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,11 +179,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasCrutch: 0
   hasChestDirty: 0
-  _hasHeadDirty: 0
+  hasHeadDirty: 0
   hasLeftArmDirty: 0
   hasLeftLegDirty: 0
   hasRightArmDirty: 0
   hasRightLegDirty: 0
+  hasChestNotWhite: 0
   hasRightArmNotWhite: 0
   hasLeftArmNotWhite: 0
   hasRightLegNotWhite: 0
@@ -193,7 +194,7 @@ MonoBehaviour:
   hasLeftArmBroken: 0
   hasRightLegBroken: 0
   hasLeftLegBroken: 0
-  hasHeadBroken: 0
+  hasKnifeInHead: 0
   hasBlood: 0
   hasSyringe: 0
   hasClownNose: 1
@@ -301,7 +302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manichini_Normali
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2995841375600177579, guid: 05e86a48132779840a68ec02631a5031, type: 3}
+    - {fileID: 6057781423030733317, guid: 05e86a48132779840a68ec02631a5031, type: 3}
+    - {fileID: 4777016010849696732, guid: 05e86a48132779840a68ec02631a5031, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 05e86a48132779840a68ec02631a5031, type: 3}
 --- !u!4 &4749030200395963294 stripped
 Transform:

@@ -27,8 +27,8 @@ public class ToColor : MonoBehaviour
     private bool isBeingHit = false;
     private bool isFullWihite = false;
 
-    [SerializeField]
-    private float timeNeedToBecomeWhite = 1.0f;
+    //[SerializeField]
+    private float timeNeedToBecomeWhite = .5f;
 
     public bool IsFullWhite { 
         get { return isFullWihite; }    
@@ -61,14 +61,14 @@ public class ToColor : MonoBehaviour
                             rend.material = cleanMaterial;
                             break;
                         case Type.green:
-                            rend.material.color = startColor;
+                            //rend.material.color = startColor;
                             rend.material = cleanMaterial;
                             break;
                         case Type.jew:
                             rend.material = cleanMaterial;
                             break;
                         case Type.pink:
-                            rend.material.color = startColor;
+                            //rend.material.color = startColor;
                             rend.material = cleanMaterial;
                             break;
                     }
@@ -80,10 +80,10 @@ public class ToColor : MonoBehaviour
                 { 
                     switch (type) { 
                         case Type.green:
-                            rend.material.color = Color.Lerp(rend.material.color, Color.white, Time.deltaTime / timeNeedToBecomeWhite);
+                            //rend.material.color = Color.Lerp(rend.material.color, Color.white, Time.deltaTime / timeNeedToBecomeWhite);
                             break;
                         case Type.pink:
-                            rend.material.color = Color.Lerp(rend.material.color, Color.white, Time.deltaTime / timeNeedToBecomeWhite);
+                            //rend.material.color = Color.Lerp(rend.material.color, Color.white, Time.deltaTime / timeNeedToBecomeWhite);
                             break;
                         default:
                             break;
