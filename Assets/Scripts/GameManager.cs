@@ -143,10 +143,7 @@ public class GameManager : MonoBehaviour
             LevelComplete();
         } else
         {
-            if (level == 5)
-                LevelComplete();
-            else
-                RepeateLevel();
+            RepeateLevel();
         }
     }
 
