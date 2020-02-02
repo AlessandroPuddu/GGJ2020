@@ -97,7 +97,7 @@ public class Puppet : MonoBehaviour
             case "ClownHair":
                 hasClownHair = false;
                 break;
-            case "Child":
+            case "Abortino_LP":
                 hasChild = false;
                 break;
             case "Knife":
