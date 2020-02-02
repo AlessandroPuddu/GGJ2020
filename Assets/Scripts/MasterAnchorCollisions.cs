@@ -1,10 +1,11 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MasterAnchorCollisions : MonoBehaviour
 {
-    [SerializeField]
+    //[SerializeField]
     private GameObject inactiveChild;
 
     //[SerializeField]
@@ -14,7 +15,8 @@ public class MasterAnchorCollisions : MonoBehaviour
 
     private void Start()
     {
-        puppet = transform.parent.GetComponent<Puppet>();
+        inactiveChild = this.transform.parent.gameObject;
+        puppet = transform.root.gameObject.GetComponent<Puppet>();
     }
 
     // TODO - On trigger stay
@@ -33,7 +35,16 @@ public class MasterAnchorCollisions : MonoBehaviour
             //inactiveChild.SetActive(true);
             inactiveChild.GetComponent<MeshRenderer>().enabled = true;
             // Changes the boolean in puppet to being fixed for the specific body part
-            puppet.ChangePuppetBool( other.gameObject.name );
+            
+
+            string name = other.gameObject.name;
+
+            if (name.Contains("(Clone)")){ 
+                int founds1 = name.IndexOf("(");
+                name = name.Remove(founds1);
+            }
+
+            puppet.ChangePuppetBool( name );
         }
     }
 

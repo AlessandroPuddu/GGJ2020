@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5208433846707312633}
   m_Layer: 0
   m_Name: RightLegBroken1
-  m_TagString: Untagged
+  m_TagString: ToDestroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
