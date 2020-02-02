@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 998947848, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5163328224332033012, guid: 9737d18a1946d6b4c8ea18f444591fef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1301,7 +1305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132602211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.737, y: 2.623, z: -0.313}
+  m_LocalPosition: {x: -0.737, y: 2.272, z: -0.313}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1341,7 +1345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1327009580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1520,7 +1524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410736711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 0.895, z: 0.45}
+  m_LocalPosition: {x: 4, y: 0.355, z: 0.45}
   m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1382630976}
@@ -1632,6 +1636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   furnaceTop: {fileID: 1810684125}
+  grateStartingPosition: {fileID: 0}
+  grateEndingPosition: {fileID: 0}
 --- !u!1 &1445405008
 GameObject:
   m_ObjectHideFlags: 0

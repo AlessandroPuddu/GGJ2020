@@ -28,6 +28,7 @@ public class BodyPartsSpawner : MonoBehaviour
     {
         puppet = puppetsManager.puppet;
         bodyPartsStrings[0] = puppet.GetPartToSpawn();
+        SpawnBodyParts( bodyPartsStrings );
     }
 
     public void SpawnBodyParts( string[] bodyParts )
@@ -60,7 +61,10 @@ public class BodyPartsSpawner : MonoBehaviour
             }
         }
 
-        bodyPartsToSpawn[ 0 ] = Instantiate( bodyPartsToSpawn[ 0 ], spawnLocation, new Quaternion() );
+        bodyPartsToSpawn[ 0 ].AddComponent<BoxCollider>();
+        bodyPartsToSpawn[ 0 ].AddComponent<Rigidbody>();
+
+        bodyPartsToSpawn[ 0 ] = Instantiate( bodyPartsToSpawn[ 0 ], spawnLocation, bodyPartsToSpawn[0].transform.rotation );
 
         //for (int i = 0; i < bodyPartsToSpawn.Length; i++ )
         //{
