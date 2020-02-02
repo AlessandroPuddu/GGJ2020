@@ -6,7 +6,7 @@ public class Puppet : MonoBehaviour
 {
     public bool hasCrutch;
     public bool hasChestDirty;
-    public bool hasHeadDirty;
+    public bool _hasHeadDirty;
     public bool hasLeftArmDirty;
     public bool hasLeftLegDirty;
     public bool hasRightArmDirty;
@@ -43,7 +43,7 @@ public class Puppet : MonoBehaviour
         if ( !hasCrutch && !hasChestDirty && !hasRightArmNotWhite && !hasLeftArmNotWhite && !hasRightLegNotWhite && !hasLeftLegNotWhite &&
             !hasHeadNotWhite && !hasRightArmBroken && !hasLeftArmBroken && !hasRightLegBroken && !hasLeftLegBroken && !hasHeadBroken &&
             !hasBlood && !hasSyringe && !hasClownNose && !hasClownHair && !hasHappyFace && !hasChild && !hasJewishChest && !hasJewishRightArm &&
-            !hasJewishLeftArm && !hasJewishRightLeg && !hasJewishLeftLeg && !hasHeadDirty && !hasLeftArmDirty && !hasLeftLegDirty && !hasRightArmDirty && !hasRightLegDirty )
+            !hasJewishLeftArm && !hasJewishRightLeg && !hasJewishLeftLeg && !_hasHeadDirty && !hasLeftArmDirty && !hasLeftLegDirty && !hasRightArmDirty && !hasRightLegDirty )
         {
             return true;
         }
