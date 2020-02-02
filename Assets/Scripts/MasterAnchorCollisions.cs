@@ -8,6 +8,8 @@ public class MasterAnchorCollisions : MonoBehaviour
     //[SerializeField]
     private GameObject inactiveChild;
 
+    private AudioSource myAS;
+
     //[SerializeField]
     //private GameObject rightPart;
 
@@ -17,6 +19,7 @@ public class MasterAnchorCollisions : MonoBehaviour
     {
         inactiveChild = this.transform.parent.gameObject;
         puppet = transform.root.gameObject.GetComponent<Puppet>();
+        myAS= GetComponent<AudioSource>();
     }
 
     // TODO - On trigger stay
@@ -35,7 +38,10 @@ public class MasterAnchorCollisions : MonoBehaviour
             //inactiveChild.SetActive(true);
             inactiveChild.GetComponent<MeshRenderer>().enabled = true;
             // Changes the boolean in puppet to being fixed for the specific body part
-            
+
+            myAS.clip = SoundManager.Instance.gimmePlug();
+            myAS.Play();
+
 
             string name = other.gameObject.name;
 
