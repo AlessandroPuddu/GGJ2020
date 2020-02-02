@@ -73,6 +73,8 @@ public class ToColor : MonoBehaviour
                             break;
                     }
                     isFullWihite = true;
+                    Puppet puppet = transform.root.gameObject.GetComponent<Puppet>();
+                    puppet.ChangePuppetPartColor( gameObject.name );
                 }
                 else
                 { 
