@@ -6,11 +6,12 @@ public class Puppet : MonoBehaviour
 {
     public bool hasCrutch;
     public bool hasChestDirty;
-    public bool _hasHeadDirty;
+    public bool hasHeadDirty;
     public bool hasLeftArmDirty;
     public bool hasLeftLegDirty;
     public bool hasRightArmDirty;
     public bool hasRightLegDirty;
+    public bool hasChestNotWhite;
     public bool hasRightArmNotWhite;
     public bool hasLeftArmNotWhite;
     public bool hasRightLegNotWhite;
@@ -20,7 +21,7 @@ public class Puppet : MonoBehaviour
     public bool hasLeftArmBroken;
     public bool hasRightLegBroken;
     public bool hasLeftLegBroken;
-    public bool hasHeadBroken;
+    public bool hasKnifeInHead;
     public bool hasBlood;
     public bool hasSyringe;
     public bool hasClownNose;
@@ -41,9 +42,10 @@ public class Puppet : MonoBehaviour
     public bool CheckAllRight()
     {
         if ( !hasCrutch && !hasChestDirty && !hasRightArmNotWhite && !hasLeftArmNotWhite && !hasRightLegNotWhite && !hasLeftLegNotWhite &&
-            !hasHeadNotWhite && !hasRightArmBroken && !hasLeftArmBroken && !hasRightLegBroken && !hasLeftLegBroken && !hasHeadBroken &&
+            !hasHeadNotWhite && !hasRightArmBroken && !hasLeftArmBroken && !hasRightLegBroken && !hasLeftLegBroken && !hasKnifeInHead &&
             !hasBlood && !hasSyringe && !hasClownNose && !hasClownHair && !hasHappyFace && !hasChild && !hasJewishChest && !hasJewishRightArm &&
-            !hasJewishLeftArm && !hasJewishRightLeg && !hasJewishLeftLeg && !_hasHeadDirty && !hasLeftArmDirty && !hasLeftLegDirty && !hasRightArmDirty && !hasRightLegDirty )
+            !hasJewishLeftArm && !hasJewishRightLeg && !hasJewishLeftLeg && !hasHeadDirty && !hasLeftArmDirty && !hasLeftLegDirty && 
+            !hasRightArmDirty && !hasRightLegDirty && !hasKnifeInHead && !hasChestNotWhite)
         {
             return true;
         }
@@ -54,7 +56,7 @@ public class Puppet : MonoBehaviour
     {
         string partToSpawn = "";
 
-        if ( hasHeadBroken )
+        if ( hasKnifeInHead )
             partToSpawn = "Head";
         if ( hasRightArmBroken )
             partToSpawn = "RightArm";
@@ -73,7 +75,7 @@ public class Puppet : MonoBehaviour
         switch ( bodyPartName )
         {
             case "Head":
-                hasHeadBroken = false;
+                hasKnifeInHead = false;
                 hasHappyFace = false;
                 break;
             case "RightArm":
@@ -88,10 +90,10 @@ public class Puppet : MonoBehaviour
             case "LeftLeg":
                 hasLeftLegBroken = false;
                 break;
-            case "Crutch":
+            case "Stampella":
                 hasCrutch = false;
                 break;
-            case "Syringe":
+            case "Siringa":
                 hasSyringe = false;
                 break;
             case "ClownNose":
@@ -102,6 +104,45 @@ public class Puppet : MonoBehaviour
                 break;
             case "Child":
                 hasChild = false;
+                break;
+            case "Knife":
+                hasKnifeInHead = false;
+                break;
+        }
+    }
+
+    public void ChangePuppetPartColor(string partName )
+    {
+        switch ( partName )
+        {
+            case "Head":
+                hasHeadNotWhite = false;
+                hasHeadDirty = false;
+                break;
+            case "Body":
+                hasChestDirty = false;
+                hasJewishChest = false;
+                hasChestNotWhite = false;
+                break;
+            case "LeftArm":
+                hasJewishLeftArm = false;
+                hasLeftArmDirty = false;
+                hasLeftArmNotWhite = false;
+                break;
+            case "RightArm":
+                hasJewishRightArm = false;
+                hasRightArmDirty = false;
+                hasRightArmNotWhite = false;
+                break;
+            case "LeftLeg":
+                hasJewishLeftLeg = false;
+                hasLeftLegDirty = false;
+                hasLeftLegNotWhite = false;
+                break;
+            case "RightLeg":
+                hasJewishRightLeg = false;
+                hasRightLegDirty = false;
+                hasRightLegNotWhite = false;
                 break;
         }
     }
