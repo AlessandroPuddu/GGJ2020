@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public List<Effect> screenContentBetweenLevels = new List<Effect>();
     public TextMeshProUGUI timetext;
     public GameObject targetPanel;
-    public float roundTimer= 15.01f;
+    public float roundTimer= 25.01f;
     public AudioSource monitorAudio;
 
     public static GameManager Instance { get { return _instance; } }

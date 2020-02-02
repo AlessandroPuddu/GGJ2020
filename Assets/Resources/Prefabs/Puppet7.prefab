@@ -15,19 +15,6 @@ MonoBehaviour:
   type: 0
   cleanMaterial: {fileID: 2100000, guid: ff3d1d7cc8a608740a32e1af53b3acfe, type: 2}
   timeNeedToBecomeWhite: 1
---- !u!65 &1670737057169507029
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4884738808206025178}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.12806836, y: 0.20210788, z: 1.650087}
-  m_Center: {x: -1.37218135e-14, y: -3.5527137e-15, z: 0.00000005960466}
 --- !u!54 &6834366624674016315
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44,6 +31,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1670737057169507029
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4884738808206025178}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12806836, y: 0.20210788, z: 1.650087}
+  m_Center: {x: -1.37218135e-14, y: -3.5527137e-15, z: 0.00000005960466}
 --- !u!114 &5389091301477875368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,11 +150,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasCrutch: 0
   hasChestDirty: 0
-  _hasHeadDirty: 0
+  hasHeadDirty: 0
   hasLeftArmDirty: 0
   hasLeftLegDirty: 0
   hasRightArmDirty: 0
   hasRightLegDirty: 0
+  hasChestNotWhite: 0
   hasRightArmNotWhite: 0
   hasLeftArmNotWhite: 0
   hasRightLegNotWhite: 0
@@ -164,7 +165,7 @@ MonoBehaviour:
   hasLeftArmBroken: 0
   hasRightLegBroken: 0
   hasLeftLegBroken: 0
-  hasHeadBroken: 1
+  hasKnifeInHead: 1
   hasBlood: 1
   hasSyringe: 0
   hasClownNose: 0
