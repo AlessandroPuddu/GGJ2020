@@ -129,7 +129,7 @@ public class SprayRaycast : MonoBehaviour
 
         LayerMask mask = 1 << 12;
 
-        if (Physics.Raycast(this.transform.position, - this.transform.forward, out objectHit, 50,mask))
+        if (Physics.SphereCast(this.transform.position, 0.1f, - this.transform.forward, out objectHit, 50,mask))
         {
             //objectHit.collider.gameObject.transform.root.gameObject.GetComponent<Renderer>().material.color = Color.red;
             ToColor toColor = objectHit.collider.gameObject.GetComponent<ToColor>();
