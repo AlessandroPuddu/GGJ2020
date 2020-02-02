@@ -7,8 +7,8 @@ public class MasterAnchorCollisions : MonoBehaviour
     [SerializeField]
     private GameObject inactiveChild;
 
-    [SerializeField]
-    private GameObject rightPart;
+    //[SerializeField]
+    //private GameObject rightPart;
 
     private Puppet puppet;
 
@@ -30,16 +30,16 @@ public class MasterAnchorCollisions : MonoBehaviour
 
             // TODO - Check if this is already active?
             // TODO - Create a copy and then set active?
-            inactiveChild.SetActive(true);
-
+            //inactiveChild.SetActive(true);
+            inactiveChild.GetComponent<MeshRenderer>().enabled = true;
             // Changes the boolean in puppet to being fixed for the specific body part
             puppet.ChangePuppetBool( other.gameObject.name );
         }
     }
 
-    public void AssignRightPart(GameObject part) { 
-        this.rightPart = part;
-    }
+    //public void AssignRightPart(GameObject part) { 
+    //    this.rightPart = part;
+    //}
 
     private IEnumerator Destroy(GameObject gameobject) { 
         yield return new WaitForSeconds(5.0f);
