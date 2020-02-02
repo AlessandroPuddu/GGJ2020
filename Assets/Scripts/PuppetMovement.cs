@@ -37,7 +37,7 @@ public class PuppetMovement : MonoBehaviour
         if (other.gameObject.name == "ObjectsKiller")
         {
             GameManager.Instance.PuppetCheck(gameObject);
-            Destroy(gameObject);
+            Destroy(gameObject.transform.root.gameObject);
             run = false;
             GameManager.Instance.SetConveyorBeltMovement(run);
         }

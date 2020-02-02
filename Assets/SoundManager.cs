@@ -9,6 +9,8 @@ public class SoundManager : MonoBehaviour
 
     public List<AudioSource> cilindri;
 
+
+    public AudioSource secondaryAudioFromScreen;
     public List<AudioClip> beep;
 
     public AudioClip victory;

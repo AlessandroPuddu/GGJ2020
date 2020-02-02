@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckTimer()
     {
+        SoundManager sm = SoundManager.Instance;
         float timeStart = Time.time;
         float timeRemaining = roundTimer;
         float timeCounting = 1;
@@ -110,8 +111,8 @@ public class GameManager : MonoBehaviour
         {
             timeCounting = Time.time - timeStart;
             timeCounting = timeRemaining - timeCounting;
-            monitorAudio.clip = SoundManager.Instance.getTimeBeat(timeCounting<3.75);
-            monitorAudio.Play();
+            sm.secondaryAudioFromScreen.clip = sm.getTimeBeat(timeCounting<3.75);
+            sm.secondaryAudioFromScreen.Play();
             timetext.alignment = TextAlignmentOptions.MidlineLeft;
             timetext.text = ""+(int)timeCounting;
 
@@ -140,7 +141,7 @@ public class GameManager : MonoBehaviour
         /*TODO
         inserisci qui i controlli per il puppet e ritornami true o false da mettere nell'if
         */
-        if (true)
+        if (puppet.GetComponent<Puppet>().CheckAllRight())
         {
             LevelComplete();
         } else
@@ -153,9 +154,8 @@ public class GameManager : MonoBehaviour
     {
         level -= 1;
         currentPuppet = null;
-        NextPuppetButton();
+        //NextPuppetButton();
         StopCoroutine(timer);
-    
     }
 
     private void LevelComplete()
