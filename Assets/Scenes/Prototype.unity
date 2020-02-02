@@ -1882,7 +1882,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 1006d28d92c47564785aaa9ad740d879,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754399108906658059, guid: 1006d28d92c47564785aaa9ad740d879,
         type: 3}
@@ -3200,7 +3200,7 @@ GameObject:
   - component: {fileID: 2087370964}
   - component: {fileID: 2087370963}
   - component: {fileID: 2087370962}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FurnaceTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
