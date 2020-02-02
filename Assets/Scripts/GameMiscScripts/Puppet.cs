@@ -51,7 +51,7 @@ public class Puppet : MonoBehaviour
     {
         string partToSpawn = "";
 
-        if ( hasKnifeInHead )
+        if ( hasKnifeInHead || hasHappyFace)
             partToSpawn = "Head";
         if ( hasRightArmBroken )
             partToSpawn = "RightArm";
