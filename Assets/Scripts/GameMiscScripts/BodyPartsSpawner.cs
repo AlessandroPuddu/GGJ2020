@@ -28,7 +28,8 @@ public class BodyPartsSpawner : MonoBehaviour
     {
         puppet = puppetsManager.puppet;
         bodyPartsStrings[0] = puppet.GetPartToSpawn();
-        SpawnBodyParts( bodyPartsStrings );
+        if ( bodyPartsStrings[ 0 ] != "")
+            SpawnBodyParts( bodyPartsStrings );
     }
 
     public void SpawnBodyParts( string[] bodyParts )
