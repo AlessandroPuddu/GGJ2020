@@ -22,5 +22,4 @@ public class ConveyorBelt : MonoBehaviour
             transform.position = spawnPoint.position;
         }
     }
-
 }

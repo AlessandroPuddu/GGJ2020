@@ -22,7 +22,6 @@ public class FurnaceBehaviour : MonoBehaviour
     {
         if (move)
         {
-
             if (open)
             {
                 furnaceTop.transform.position = Vector3.Lerp(furnaceTop.transform.position, grateEndingPosition.position, 0.9f * Time.deltaTime * 8);
