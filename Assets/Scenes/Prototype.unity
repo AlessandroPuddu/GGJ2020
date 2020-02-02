@@ -627,6 +627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepairOVRPlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 8636518352061051889, guid: 113c68e0737bc524292a198ba323c20e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8793223820228594156, guid: 113c68e0737bc524292a198ba323c20e,
         type: 3}
       propertyPath: m_TagString
@@ -1624,7 +1629,7 @@ MonoBehaviour:
     voiceOver: {fileID: 0}
   timetext: {fileID: 1962843557}
   targetPanel: {fileID: 1530402949}
-  roundTimer: 15
+  roundTimer: 15.01
   monitorAudio: {fileID: 1518186857}
 --- !u!114 &1382630978
 MonoBehaviour:
@@ -1643,6 +1648,13 @@ MonoBehaviour:
   - {fileID: 1024076795}
   - {fileID: 2001309175}
   - {fileID: 235760319}
+  beep:
+  - {fileID: 8300000, guid: 2fd5ee54632cbca4f9b73ce7e5f66eec, type: 3}
+  - {fileID: 8300000, guid: 8d4cc2751e7d8ee4989c606e4edf9898, type: 3}
+  - {fileID: 8300000, guid: 67ee260ed3b90054292395dc2086a9ff, type: 3}
+  - {fileID: 8300000, guid: d071c30cb48b97d4d87f6bf13c0a0e99, type: 3}
+  victory: {fileID: 8300000, guid: 292ec5ea196265941bb65a56093c75a8, type: 3}
+  defeat: {fileID: 8300000, guid: 51c37fddeb7e15c469e00b3355d64ec4, type: 3}
 --- !u!1001 &1384354868
 PrefabInstance:
   m_ObjectHideFlags: 0

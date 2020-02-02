@@ -9,6 +9,11 @@ public class SoundManager : MonoBehaviour
 
     public List<AudioSource> cilindri;
 
+    public List<AudioClip> beep;
+
+    public AudioClip victory;
+    public AudioClip defeat;
+
 
     private void Awake()
     {
@@ -40,6 +45,21 @@ public class SoundManager : MonoBehaviour
                 if (a.isPlaying) return;
                 a.Play();
             }
+        }
+    }
+
+    private bool even;
+    public AudioClip getTimeBeat(bool urgent)
+    {
+        if (!urgent)
+        {
+            even = !even;
+            return even?beep[0]:beep[1];
+        }
+        else
+        {
+            even = !even;
+            return even ? beep[2] : beep[3];
         }
     }
 }
