@@ -317,6 +317,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 328908283, guid: 9737d18a1946d6b4c8ea18f444591fef, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5163328224332033012, guid: 9737d18a1946d6b4c8ea18f444591fef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -602,7 +606,7 @@ PrefabInstance:
     - target: {fileID: 8636518352061051889, guid: 113c68e0737bc524292a198ba323c20e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8793223820228594156, guid: 113c68e0737bc524292a198ba323c20e,
         type: 3}
@@ -1476,7 +1480,7 @@ MonoBehaviour:
     voiceOver: {fileID: 0}
   timetext: {fileID: 1962843557}
   targetPanel: {fileID: 1530402949}
-  roundTimer: 15
+  roundTimer: 15.1
   monitorAudio: {fileID: 1518186857}
 --- !u!114 &1382630978
 MonoBehaviour:
