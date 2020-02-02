@@ -6,9 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class WrongPartBehaviour : MonoBehaviour
 {
-    [SerializeField]
+    //[SerializeField]
     private OVRGrabbable oVR;
-    [SerializeField]
+    //[SerializeField]
     private Rigidbody rb;
     //[SerializeField]
     //private BoxCollider bc;
@@ -17,7 +17,7 @@ public class WrongPartBehaviour : MonoBehaviour
 
     float m_deltaTime = 0f;
 
-    [SerializeField]
+    //[SerializeField]
     private Collider bc;
 
     private Vector3 startPosition = Vector3.zero;
@@ -27,7 +27,10 @@ public class WrongPartBehaviour : MonoBehaviour
 
     private void Awake()
     {
+
         oVR = this.GetComponent<OVRGrabbable>();
+        rb = this.GetComponent<Rigidbody>();
+        bc = this.GetComponent<BoxCollider>();
         //rb = this.transform.root.gameObject.GetComponent<Rigidbody>();
         puppet = GameObject.FindGameObjectWithTag( "SnapMaster" ).GetComponent<Puppet>();
     }
