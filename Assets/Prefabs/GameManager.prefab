@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7340966698861775033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340966698861775030}
+  m_Layer: 0
+  m_Name: PuppetDeadEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7340966698861775030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340966698861775033}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.75, y: 0.355, z: 0.186}
+  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 7340966698966559934}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7340966698966559937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340966698966559934}
+  - component: {fileID: 7340966698966559935}
+  - component: {fileID: 7340966698966559932}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7340966698966559934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340966698966559937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.394, z: 0.315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7340966700584136767}
+  - {fileID: 7340966700057472071}
+  - {fileID: 7340966698861775030}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7340966698966559935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340966698966559937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f6592b373aca946b91929bfdcce56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puppetOrigin: {fileID: 7340966700584136767}
+  puppetStopPoint: {fileID: 7340966700057472071}
+  puppetDeadEnd: {fileID: 7340966698861775030}
+  screenContentBetweenLevels:
+  - text: Welcome worker. Repair the subjects, please.
+    voiceOver: {fileID: 8300000, guid: 57ebaf15d7902dd4289d33c4a4c06fea, type: 3}
+  - text: Nicely done.
+    voiceOver: {fileID: 8300000, guid: 310d314c00ae8a040b8ff97c1ebca3e0, type: 3}
+  - text: Use the spray to return the subjects to their optimal state.
+    voiceOver: {fileID: 8300000, guid: 7a81a88490d91d44a82304ab70a13261, type: 3}
+  - text: Work ennobles us.
+    voiceOver: {fileID: 8300000, guid: 96524389761b24441b6d9bbb0a945f4a, type: 3}
+  - text: Life is Order.
+    voiceOver: {fileID: 8300000, guid: 77c74f9c321b6ca4e9beb21ffbddf8e9, type: 3}
+  - text: Thank you.
+    voiceOver: {fileID: 0}
+  - text: It is a privilege to be a repairer.
+    voiceOver: {fileID: 0}
+  - text: Fix them all.
+    voiceOver: {fileID: 0}
+  - text: If it is not white, it is broken.
+    voiceOver: {fileID: 0}
+  - text: Your work shift is over. See you tomorrow.
+    voiceOver: {fileID: 0}
+  timetext: {fileID: 0}
+  targetPanel: {fileID: 0}
+  roundTimer: 15.01
+  monitorAudio: {fileID: 0}
+--- !u!114 &7340966698966559932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340966698966559937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32defdeb934f13e469cfd2429708ae33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cilindri:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  beep:
+  - {fileID: 8300000, guid: 2fd5ee54632cbca4f9b73ce7e5f66eec, type: 3}
+  - {fileID: 8300000, guid: 8d4cc2751e7d8ee4989c606e4edf9898, type: 3}
+  - {fileID: 8300000, guid: 67ee260ed3b90054292395dc2086a9ff, type: 3}
+  - {fileID: 8300000, guid: d071c30cb48b97d4d87f6bf13c0a0e99, type: 3}
+  victory: {fileID: 8300000, guid: 292ec5ea196265941bb65a56093c75a8, type: 3}
+  defeat: {fileID: 8300000, guid: 51c37fddeb7e15c469e00b3355d64ec4, type: 3}
+--- !u!1 &7340966700057472070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340966700057472071}
+  m_Layer: 0
+  m_Name: PuppetStop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7340966700057472071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340966700057472070}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.355, z: 0.186}
+  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 7340966698966559934}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7340966700584136766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340966700584136767}
+  m_Layer: 0
+  m_Name: PuppetsOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7340966700584136767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7340966700584136766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.1, y: 0.355, z: 0.186}
+  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 7340966698966559934}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
